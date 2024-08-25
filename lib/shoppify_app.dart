@@ -14,7 +14,7 @@ class ShoppifyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.registerScreen,
+        initialRoute: Routes.loginScreen,
         onGenerateRoute: AppRoutes().onGenerateRoute,
         theme: ThemeData(
             scaffoldBackgroundColor: AppColors.white,

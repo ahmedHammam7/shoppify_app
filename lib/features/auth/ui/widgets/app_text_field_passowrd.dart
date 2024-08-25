@@ -6,12 +6,14 @@ import 'package:shoppify_app/core/theming/text_styles.dart';
 class AppTextFieldPassword extends StatelessWidget {
   const AppTextFieldPassword(
       {super.key,
-      required this.controller,
+      this.controller,
       required this.obscureText,
-      this.iconPressed});
-  final TextEditingController controller;
+      this.iconPressed,
+      required this.validator});
+  final TextEditingController? controller;
   final bool obscureText;
   final void Function()? iconPressed;
+  final String? Function(String?) validator;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -60,6 +62,9 @@ class AppTextFieldPassword extends StatelessWidget {
             ),
           ),
         ),
+        validator: (value) {
+          return validator(value);
+        },
       ),
     );
   }
