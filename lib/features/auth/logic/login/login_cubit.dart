@@ -22,6 +22,8 @@ class LoginCubit extends Cubit<LoginState> {
         emit(const LoginState.error('No user found for that email.'));
       } else if (e.code == 'wrong-password') {
         emit(const LoginState.error('Wrong password provided for that user.'));
+      } else {
+        emit(LoginState.error(e.toString()));
       }
     } catch (e) {
       emit(LoginState.error(e.toString()));

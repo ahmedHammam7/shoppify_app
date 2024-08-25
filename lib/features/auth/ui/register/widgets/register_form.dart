@@ -65,6 +65,8 @@ class _MyWidgetState extends State<RegisterForm> {
               if (!AppRegex.isEmailValid(value!) || value.isEmpty) {
                 return "Invalid email";
               }
+
+              return null;
             },
           ),
           AppTextFieldPassword(
@@ -79,6 +81,8 @@ class _MyWidgetState extends State<RegisterForm> {
                   value.isEmpty) {
                 return "Invalid password";
               }
+
+              return null;
             },
             iconPressed: () {
               obscureText = !obscureText;
@@ -92,6 +96,8 @@ class _MyWidgetState extends State<RegisterForm> {
               if (!AppRegex.isPhoneNumberValid(value!) || value.isEmpty) {
                 return "Invalid phone number";
               }
+
+              return null;
             },
             labelText: "Phone",
           ),
