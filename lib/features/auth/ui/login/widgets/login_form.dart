@@ -31,6 +31,8 @@ class _LoginFormState extends State<LoginForm> {
               if (!AppRegex.isEmailValid(value!) || value.isEmpty) {
                 return "Please enter a valid email";
               }
+
+              return null;
             },
           ),
           AppTextFieldPassword(
@@ -44,6 +46,8 @@ class _LoginFormState extends State<LoginForm> {
                   value.isEmpty) {
                 return "Please enter a valid password";
               }
+
+              return null;
             },
             controller: context.read<LoginCubit>().passwordController,
             iconPressed: () {
