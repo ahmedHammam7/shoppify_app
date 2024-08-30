@@ -14,9 +14,10 @@ class ShoppifyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.loginScreen,
+        initialRoute: Routes.homeScreen,
         onGenerateRoute: AppRoutes().onGenerateRoute,
         theme: ThemeData(
+            appBarTheme: const AppBarTheme(backgroundColor: AppColors.white),
             scaffoldBackgroundColor: AppColors.white,
             primaryColor: AppColors.mainBlack),
       ),

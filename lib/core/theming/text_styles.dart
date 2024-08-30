@@ -20,6 +20,16 @@ abstract class TextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.lightGray,
   );
+  static TextStyle body2 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.lighterGray,
+  );
+  static TextStyle caption2 = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.lightGray,
+  );
 
   static TextStyle termsAndCondition = TextStyle(
     fontSize: 14.sp,
