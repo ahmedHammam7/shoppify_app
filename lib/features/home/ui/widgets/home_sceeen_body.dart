@@ -13,58 +13,60 @@ class HomeScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: CustomScrollView(slivers: [
-        SliverList(
-          delegate: SliverChildBuilderDelegate((context, index) {
-            return Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.w),
-                    child: Text(
-                      "Hello Ahmed",
-                      style: TextStyles.heading1,
+      child: CustomScrollView(
+        slivers: [
+          SliverList(
+            delegate: SliverChildBuilderDelegate((context, index) {
+              return Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 8.w),
+                      child: Text(
+                        "Hello Ahmed",
+                        style: TextStyles.heading1,
+                      ),
                     ),
-                  ),
-                  verticalSpace(5),
-                  const HeaderList(),
-                  verticalSpace(30),
-                  const DealsSection(),
-                  verticalSpace(5),
-                  const DealsContainer(),
-                  verticalSpace(15),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.w),
-                    child:
-                        Text("Recommended for you", style: TextStyles.heading2),
-                  ),
-                ],
+                    verticalSpace(5),
+                    const HeaderList(),
+                    verticalSpace(30),
+                    const DealsSection(),
+                    verticalSpace(5),
+                    const DealsContainer(),
+                    verticalSpace(15),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10.w),
+                      child: Text("Recommended for you",
+                          style: TextStyles.heading2),
+                    ),
+                  ],
+                ),
+              );
+            }, childCount: 1),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 20.w,
+            ),
+            sliver: SliverGrid(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 14.h,
+                crossAxisSpacing: 14.w,
+                mainAxisExtent: 240.h,
               ),
-            );
-          }, childCount: 1),
-        ),
-        SliverPadding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 20.w,
-          ),
-          sliver: SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 14.h,
-              crossAxisSpacing: 14.w,
-              mainAxisExtent: 240.h,
-            ),
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                return const RecomededListItem();
-              },
-              childCount: 10,
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  return const RecomededListItem();
+                },
+                childCount: 10,
+              ),
             ),
           ),
-        )
-      ]),
+        ],
+      ),
     );
   }
 }

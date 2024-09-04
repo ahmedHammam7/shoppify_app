@@ -9,4 +9,5 @@ abstract class AppColors {
   static const Color red = Color(0xFFFA254C);
   static const Color textFieldBackground = Color(0xFFF5F5F5);
   static const Color white = Color(0xFFFFFFFF);
+  static const Color spacerLine = Color(0xffC9CCCF);
 }
