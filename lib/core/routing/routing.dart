@@ -5,6 +5,8 @@ import 'package:shoppify_app/features/auth/logic/register/register_cubit.dart';
 import 'package:shoppify_app/features/auth/ui/login/views/login_screen.dart';
 import 'package:shoppify_app/features/auth/ui/register/view/register_screen.dart';
 import 'package:shoppify_app/features/home/ui/views/home_screen.dart';
+import 'package:shoppify_app/features/search/ui/views/search_screen.dart';
+import 'package:shoppify_app/features/search/ui/views/widgets/details_screen.dart';
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -20,6 +22,14 @@ class AppRoutes {
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (context) => const HomeScreen(),
+        );
+      case Routes.searchScreen:
+        return MaterialPageRoute(
+          builder: (context) => const SearchScreen(),
+        );
+      case Routes.detailScreen:
+        return MaterialPageRoute(
+          builder: (context) => const DetailsScreen(),
         );
       default:
         return null;
