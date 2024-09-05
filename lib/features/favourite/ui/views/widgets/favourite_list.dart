@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
-import 'package:shoppify_app/features/favourite/ui/widgets/favourite_list_item.dart';
+import 'package:shoppify_app/features/favourite/ui/views/widgets/favourite_list_item.dart';
 
 class FavouriteList extends StatelessWidget {
   const FavouriteList({super.key});

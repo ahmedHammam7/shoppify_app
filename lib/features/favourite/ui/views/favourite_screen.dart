@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
-import 'package:shoppify_app/features/favourite/ui/widgets/favourite_screen_body.dart';
+import 'package:shoppify_app/features/favourite/ui/views/widgets/favourite_screen_body.dart';
 
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});
