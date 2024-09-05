@@ -4,6 +4,7 @@ import 'package:shoppify_app/core/routing/routes.dart';
 import 'package:shoppify_app/features/auth/logic/register/register_cubit.dart';
 import 'package:shoppify_app/features/auth/ui/login/views/login_screen.dart';
 import 'package:shoppify_app/features/auth/ui/register/view/register_screen.dart';
+import 'package:shoppify_app/features/favourite/ui/favourite_screen.dart';
 import 'package:shoppify_app/features/home/ui/views/home_screen.dart';
 import 'package:shoppify_app/features/search/ui/views/search_screen.dart';
 import 'package:shoppify_app/features/search/ui/views/widgets/details_screen.dart';
@@ -30,6 +31,10 @@ class AppRoutes {
       case Routes.detailScreen:
         return MaterialPageRoute(
           builder: (context) => const DetailsScreen(),
+        );
+      case Routes.favoriteScreen:
+        return MaterialPageRoute(
+          builder: (context) => const FavouriteScreen(),
         );
       default:
         return null;
