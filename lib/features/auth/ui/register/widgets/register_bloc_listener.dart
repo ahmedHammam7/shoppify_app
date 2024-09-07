@@ -30,7 +30,7 @@ class RegisterBlocListener extends StatelessWidget {
                 ),
               );
             },
-            success: () {
+            success: (registerResponse) {
               context.pop();
               showSuccessDialog(context);
             },

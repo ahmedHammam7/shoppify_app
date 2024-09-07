@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shoppify_app/core/di/dependency_injection.dart';
 import 'package:shoppify_app/core/routing/routes.dart';
 import 'package:shoppify_app/features/auth/logic/register/register_cubit.dart';
 import 'package:shoppify_app/features/auth/ui/login/views/login_screen.dart';
@@ -7,7 +8,7 @@ import 'package:shoppify_app/features/auth/ui/register/view/register_screen.dart
 import 'package:shoppify_app/features/cart/ui/views/cart_screen.dart';
 import 'package:shoppify_app/features/favourite/ui/views/favourite_screen.dart';
 import 'package:shoppify_app/features/home/ui/views/home_screen.dart';
-import 'package:shoppify_app/features/home_layout/ui/views/home_layout.dart';
+import 'package:shoppify_app/features/home/ui/views/home_layout.dart';
 import 'package:shoppify_app/features/search/ui/views/search_screen.dart';
 import 'package:shoppify_app/features/search/ui/views/widgets/details_screen.dart';
 
@@ -19,7 +20,7 @@ class AppRoutes {
       case Routes.registerScreen:
         return MaterialPageRoute(
             builder: (context) => BlocProvider(
-                  create: (context) => RegisterCubit(),
+                  create: (context) => RegisterCubit(getIt()),
                   child: const RegisterScreen(),
                 ));
       case Routes.homeScreen:
