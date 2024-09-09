@@ -20,7 +20,7 @@ class ResultBody extends StatelessWidget {
                 crossAxisCount: 2,
                 mainAxisSpacing: 14.h,
                 crossAxisSpacing: 14.w,
-                mainAxisExtent: 240.h,
+                mainAxisExtent: MediaQuery.sizeOf(context).height * 0.3,
               ),
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
