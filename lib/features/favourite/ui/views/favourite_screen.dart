@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shoppify_app/core/di/dependency_injection.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
+import 'package:shoppify_app/features/favourite/logic/cubit/favourites_cubit.dart';
 import 'package:shoppify_app/features/favourite/ui/views/widgets/favourite_screen_body.dart';
 
 class FavouriteScreen extends StatelessWidget {
@@ -15,7 +18,10 @@ class FavouriteScreen extends StatelessWidget {
           style: TextStyles.heading3.copyWith(fontWeight: FontWeight.w700),
         ),
       ),
-      body: const FavouriteScreenBody(),
+      body: BlocProvider(
+        create: (context) => FavouritesCubit(getIt())..getFavourites(),
+        child: const FavouriteScreenBody(),
+      ),
     );
   }
 }

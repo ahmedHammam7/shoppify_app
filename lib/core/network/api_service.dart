@@ -5,6 +5,7 @@ import 'package:shoppify_app/features/auth/data/models/login/login_request.dart'
 import 'package:shoppify_app/features/auth/data/models/login/login_response.dart';
 import 'package:shoppify_app/features/auth/data/models/register/register_request.dart';
 import 'package:shoppify_app/features/auth/data/models/register/register_response.dart';
+import 'package:shoppify_app/features/favourite/data/models/all_favourites_response.dart';
 import 'package:shoppify_app/features/favourite/data/models/favourite_response.dart';
 import 'package:shoppify_app/features/home/data/models/home_response.dart';
 part 'api_service.g.dart';
@@ -23,5 +24,9 @@ abstract class ApiService {
       @Header('Authorization') String token, @Header('lang') String lang);
   @POST(ApiConstants.favorites)
   Future<FavouriteResponse> addFavourites(@Body() Map<String, dynamic> body,
+      @Header('Authorization') String token, @Header('lang') String lang);
+
+  @GET(ApiConstants.favorites)
+  Future<AllFavouritesResponse> getFavourites(
       @Header('Authorization') String token, @Header('lang') String lang);
 }
