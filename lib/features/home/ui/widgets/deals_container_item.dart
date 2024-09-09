@@ -1,37 +1,30 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
+import 'package:shoppify_app/features/home/data/models/home_response.dart';
+import 'package:shoppify_app/features/home/logic/cubit/home_cubit.dart';
 
 class DealsContainerItem extends StatefulWidget {
-  const DealsContainerItem(
-      {super.key,
-      required this.image,
-      required this.title,
-      required this.offerPrice,
-      required this.priceBeforeOffer,
-      required this.name,
-      required this.desc});
-  final String image;
-  final String title;
-  final String offerPrice;
-  final String priceBeforeOffer;
-  final String name;
-  final String desc;
+  const DealsContainerItem({
+    super.key,
+    required this.products,
+  });
 
+  final Products products;
   @override
   State<DealsContainerItem> createState() => _DealsContainerItemState();
 }
 
 class _DealsContainerItemState extends State<DealsContainerItem> {
-  bool favorite = false;
-
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 330.w,
-      height: 180.h,
+      height: MediaQuery.of(context).size.height * 0.25,
       decoration: BoxDecoration(
         color: AppColors.textFieldBackground,
         borderRadius: BorderRadius.all(
@@ -40,11 +33,21 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
       ),
       child: Row(
         children: [
-          Image.asset(
-            widget.image,
-            width: 170.w,
-            height: 120.h,
-          ),
+          widget.products.image != ""
+              ? CachedNetworkImage(
+                  placeholder: (context, url) =>
+                      const CircularProgressIndicator(
+                    color: AppColors.mainBlack,
+                  ),
+                  imageUrl: widget.products.image,
+                  width: 170.w,
+                  height: 120.h,
+                )
+              : Image.asset(
+                  "lib/core/assets/png/headphoneTest.png",
+                  width: 170.w,
+                  height: 120.h,
+                ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,12 +59,14 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
                   backgroundColor: AppColors.white,
                   radius: 17.r,
                   child: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        favorite = !favorite;
-                      });
+                    onPressed: () async {
+                      await context.read<HomeCubit>().addFavourites(
+                          {"product_id": widget.products.id.toString()});
+                      widget.products.inFavorites =
+                          !widget.products.inFavorites;
+                      setState(() {});
                     },
-                    icon: favorite
+                    icon: widget.products.inFavorites
                         ? Icon(
                             Icons.favorite,
                             color: AppColors.mainBlack,
@@ -76,20 +81,20 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
                 ),
               ),
               Text(
-                widget.title,
+                "",
                 style: TextStyles.caption2,
               ),
               verticalSpace(10),
               Row(
                 children: [
                   Text(
-                    widget.offerPrice,
+                    "${widget.products.price} \$",
                     style: TextStyles.heading3.copyWith(
                         color: AppColors.red, fontWeight: FontWeight.w800),
                   ),
                   horizontalSpace(10),
                   Text(
-                    widget.priceBeforeOffer,
+                    "${widget.products.oldPrice} \$",
                     style: TextStyles.body2.copyWith(
                         color: AppColors.lighterGray,
                         decoration: TextDecoration.lineThrough),
@@ -99,7 +104,7 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.4,
                 child: Text(
-                  widget.name,
+                  widget.products.name,
                   style: TextStyles.heading3.copyWith(
                       color: AppColors.mainBlack,
                       overflow: TextOverflow.ellipsis),
@@ -107,8 +112,9 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.4,
+                height: MediaQuery.of(context).size.height * 0.05,
                 child: Text(
-                  widget.desc,
+                  widget.products.description,
                   style: TextStyles.caption2
                       .copyWith(overflow: TextOverflow.ellipsis),
                 ),

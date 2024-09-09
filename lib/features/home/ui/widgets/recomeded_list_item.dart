@@ -1,17 +1,23 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
+import 'package:shoppify_app/features/home/data/models/home_response.dart';
+import 'package:shoppify_app/features/home/logic/cubit/home_cubit.dart';
 
 class RecomededListItem extends StatefulWidget {
-  const RecomededListItem({super.key});
+  const RecomededListItem({
+    super.key,
+    required this.products,
+  });
+  final Products products;
 
   @override
   State<RecomededListItem> createState() => _RecomededListItemState();
 }
-
-bool favorite = false;
 
 class _RecomededListItemState extends State<RecomededListItem> {
   @override
@@ -23,19 +29,27 @@ class _RecomededListItemState extends State<RecomededListItem> {
           alignment: AlignmentDirectional.center,
           children: [
             Container(
-              width: 160.w,
-              height: 170.h,
-              decoration: BoxDecoration(
-                color: AppColors.textFieldBackground,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(24.r),
+                width: 160.w,
+                height: 170.h,
+                decoration: BoxDecoration(
+                  color: AppColors.textFieldBackground,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(24.r),
+                  ),
                 ),
-              ),
-              child: Image.asset(
-                "lib/core/assets/png/headphoneTest.png",
-                height: 100.h,
-              ),
-            ),
+                child: widget.products.image == ""
+                    ? Image.asset(
+                        "lib/core/assets/png/headphoneTest.png",
+                        height: 100.h,
+                      )
+                    : CachedNetworkImage(
+                        placeholder: (context, url) =>
+                            const CircularProgressIndicator(
+                          color: AppColors.mainBlack,
+                        ),
+                        imageUrl: widget.products.image,
+                        height: 100.h,
+                      )),
             Positioned(
               top: 8.h,
               right: 12.w,
@@ -43,12 +57,13 @@ class _RecomededListItemState extends State<RecomededListItem> {
                 backgroundColor: AppColors.white,
                 radius: 17.r,
                 child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      favorite = !favorite;
-                    });
+                  onPressed: () async {
+                    await context.read<HomeCubit>().addFavourites(
+                        {"product_id": widget.products.id.toString()});
+                    widget.products.inFavorites = !widget.products.inFavorites;
+                    setState(() {});
                   },
-                  icon: favorite
+                  icon: widget.products.inFavorites
                       ? Icon(
                           Icons.favorite,
                           color: AppColors.mainBlack,
@@ -66,7 +81,9 @@ class _RecomededListItemState extends State<RecomededListItem> {
         ),
         verticalSpace(5.h),
         Text(
-          "\$" "209.99",
+          widget.products.price == 0
+              ? "\$" "209.99"
+              : "${widget.products.price.toString()}\$",
           style: TextStyles.heading3.copyWith(
               color: AppColors.mainBlack, fontWeight: FontWeight.w800),
         ),
@@ -74,7 +91,9 @@ class _RecomededListItemState extends State<RecomededListItem> {
           width: 152.w,
           height: 32.h,
           child: Text(
-            "SONY Premium Wireless Headphones",
+            widget.products.name == ""
+                ? "SONY Premium Wireless Headphones"
+                : widget.products.name,
             style: TextStyles.heading3.copyWith(
               color: AppColors.mainBlack,
               height: 1.h,
