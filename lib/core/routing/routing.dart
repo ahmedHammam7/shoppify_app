@@ -9,11 +9,13 @@ import 'package:shoppify_app/features/cart/ui/views/cart_screen.dart';
 import 'package:shoppify_app/features/favourite/ui/views/favourite_screen.dart';
 import 'package:shoppify_app/features/home/ui/views/home_screen.dart';
 import 'package:shoppify_app/features/home/ui/views/home_layout.dart';
+import 'package:shoppify_app/features/search/data/models/search_response.dart';
 import 'package:shoppify_app/features/search/ui/views/search_screen.dart';
 import 'package:shoppify_app/features/search/ui/views/widgets/details_screen.dart';
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings settings) {
+    final args = settings.arguments;
     switch (settings.name) {
       case Routes.loginScreen:
         return MaterialPageRoute(builder: (context) => const LoginScreen());
@@ -33,7 +35,9 @@ class AppRoutes {
         );
       case Routes.detailScreen:
         return MaterialPageRoute(
-          builder: (context) => const DetailsScreen(),
+          builder: (context) => DetailsScreen(
+            data: args as SearchDataData,
+          ),
         );
       case Routes.favoriteScreen:
         return MaterialPageRoute(

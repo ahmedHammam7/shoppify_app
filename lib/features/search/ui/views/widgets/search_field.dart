@@ -4,15 +4,16 @@ import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
 
 class SearchField extends StatelessWidget {
-  const SearchField({super.key, required this.controller});
-  final TextEditingController controller;
+  const SearchField({super.key, this.onsubmitted});
+
+  final void Function(String)? onsubmitted;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 20.h),
       child: TextField(
+        onSubmitted: onsubmitted,
         cursorColor: AppColors.mainBlack,
-        controller: controller,
         decoration: InputDecoration(
           isDense: true,
           contentPadding:

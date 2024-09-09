@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/features/search/data/models/search_response.dart';
 import 'package:shoppify_app/features/search/ui/views/widgets/result_list_item.dart';
 
 class ResultBody extends StatelessWidget {
-  const ResultBody({super.key});
-
+  const ResultBody({super.key, required this.data});
+  final List<SearchDataData> data;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -24,9 +25,11 @@ class ResultBody extends StatelessWidget {
               ),
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
-                  return const ResultListItem();
+                  return ResultListItem(
+                    data: data[index],
+                  );
                 },
-                childCount: 10,
+                childCount: data.length,
               ),
             ),
           ),

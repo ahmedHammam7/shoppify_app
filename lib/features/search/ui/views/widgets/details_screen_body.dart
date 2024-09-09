@@ -1,18 +1,20 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
+import 'package:shoppify_app/features/search/data/models/search_response.dart';
+import 'package:shoppify_app/features/search/logic/cubit/search_cubit.dart';
+import 'package:shoppify_app/features/search/ui/views/widgets/search_body.dart';
 
 class DetailsScreenBody extends StatefulWidget {
-  const DetailsScreenBody({super.key});
-
+  const DetailsScreenBody({super.key, required this.data});
+  final SearchDataData data;
   @override
   State<DetailsScreenBody> createState() => _DetailsScreenBodyState();
 }
-
-bool favorite = false;
-bool inCart = false;
 
 class _DetailsScreenBodyState extends State<DetailsScreenBody> {
   @override
@@ -36,10 +38,19 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
                         Radius.circular(24.r),
                       ),
                     ),
-                    child: Image.asset(
-                      "lib/core/assets/png/headphoneTest.png",
-                      height: 100.h,
-                    ),
+                    child: widget.data.image == ""
+                        ? Image.asset(
+                            "lib/core/assets/png/headphoneTest.png",
+                            height: 100.h,
+                          )
+                        : CachedNetworkImage(
+                            placeholder: (context, url) =>
+                                const CircularProgressIndicator(
+                              color: AppColors.mainBlack,
+                            ),
+                            imageUrl: widget.data.image,
+                            height: 100.h,
+                          ),
                   ),
                   Positioned(
                     bottom: 60.h,
@@ -48,12 +59,14 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
                       backgroundColor: AppColors.white,
                       radius: 17.r,
                       child: IconButton(
-                        onPressed: () {
-                          setState(() {
-                            favorite = !favorite;
+                        onPressed: () async {
+                          await context.read<SearchCubit>().addFavourites({
+                            "product_id": widget.data.id,
                           });
+                          widget.data.inFavorites = !widget.data.inFavorites;
+                          setState(() {});
                         },
-                        icon: favorite
+                        icon: widget.data.inFavorites
                             ? Icon(
                                 Icons.favorite,
                                 color: AppColors.mainBlack,
@@ -75,11 +88,9 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
                       radius: 17.r,
                       child: IconButton(
                         onPressed: () {
-                          setState(() {
-                            inCart = !inCart;
-                          });
+                          setState(() {});
                         },
-                        icon: inCart
+                        icon: widget.data.inCart
                             ? Icon(
                                 Icons.shopping_cart,
                                 color: AppColors.mainBlack,
@@ -97,14 +108,14 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
               ),
               verticalSpace(15),
               Text(
-                "\$199.99",
+                "${widget.data.price.toString()}\$",
                 style:
                     TextStyles.heading2.copyWith(fontWeight: FontWeight.w800),
               ),
               SizedBox(
                 width: MediaQuery.sizeOf(context).width * 0.7,
                 child: Text(
-                  "SONY Premium Wireless Headphones",
+                  widget.data.name,
                   style: TextStyles.heading2.copyWith(height: 1),
                 ),
               ),
@@ -117,7 +128,7 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
               ),
               verticalSpace(15),
               Text(
-                "The technology with two noise sensors and two microphones on each ear cup detects ambient noise and sends the data to the HD noise minimization processor QN1. Using a new algorithm, the QN1 then processes and minimizes noise for different acoustic environments in real time. Together with a new Bluetooth Audio SoC ",
+                widget.data.description,
                 style: TextStyles.body2.copyWith(height: 1.5),
               ),
             ],

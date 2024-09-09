@@ -1,17 +1,21 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/core/helper/extension.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
+import 'package:shoppify_app/core/routing/routes.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
+import 'package:shoppify_app/features/search/data/models/search_response.dart';
+import 'package:shoppify_app/features/search/logic/cubit/search_cubit.dart';
 
 class ResultListItem extends StatefulWidget {
-  const ResultListItem({super.key});
-
+  const ResultListItem({super.key, required this.data});
+  final SearchDataData data;
   @override
   State<ResultListItem> createState() => _ResultListItemState();
 }
-
-bool favorite = false;
 
 class _ResultListItemState extends State<ResultListItem> {
   @override
@@ -31,10 +35,25 @@ class _ResultListItemState extends State<ResultListItem> {
                   Radius.circular(24.r),
                 ),
               ),
-              child: Image.asset(
-                "lib/core/assets/png/headphoneTest.png",
-                height: 100.h,
-              ),
+              child: widget.data.image == ""
+                  ? Image.asset(
+                      "lib/core/assets/png/headphoneTest.png",
+                      height: 100.h,
+                    )
+                  : InkWell(
+                      onTap: () {
+                        context.pushNamed(Routes.detailScreen,
+                            arguments: widget.data);
+                      },
+                      child: CachedNetworkImage(
+                        placeholder: (context, url) =>
+                            const CircularProgressIndicator(
+                          color: AppColors.mainBlack,
+                        ),
+                        imageUrl: widget.data.image,
+                        height: 100.h,
+                      ),
+                    ),
             ),
             Positioned(
               top: 8.h,
@@ -43,12 +62,16 @@ class _ResultListItemState extends State<ResultListItem> {
                 backgroundColor: AppColors.white,
                 radius: 17.r,
                 child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      favorite = !favorite;
+                  onPressed: () async {
+                    await context.read<SearchCubit>().addFavourites({
+                      "product_id": widget.data.id.toString(),
+                    }).then((value) {
+                      widget.data.inFavorites = !widget.data.inFavorites;
                     });
+
+                    setState(() {});
                   },
-                  icon: favorite
+                  icon: widget.data.inFavorites
                       ? Icon(
                           Icons.favorite,
                           color: AppColors.mainBlack,
@@ -66,7 +89,7 @@ class _ResultListItemState extends State<ResultListItem> {
         ),
         verticalSpace(5.h),
         Text(
-          "\$" "209.99",
+          "${widget.data.price.toString()}\$",
           style: TextStyles.heading3.copyWith(
               color: AppColors.mainBlack, fontWeight: FontWeight.w800),
         ),
@@ -74,7 +97,7 @@ class _ResultListItemState extends State<ResultListItem> {
           width: 152.w,
           height: 32.h,
           child: Text(
-            "SONY Premium Wireless Headphones",
+            widget.data.name,
             style: TextStyles.heading3.copyWith(
               color: AppColors.mainBlack,
               height: 1.h,
