@@ -1,12 +1,16 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
+import 'package:shoppify_app/features/favourite/data/models/all_favourites_response.dart';
+import 'package:shoppify_app/features/favourite/logic/cubit/favourites_cubit.dart';
 
 class FavouriteListItem extends StatefulWidget {
-  const FavouriteListItem({super.key});
-
+  const FavouriteListItem({super.key, required this.products});
+  final AllFavouriteDataDataProducts products;
   @override
   State<FavouriteListItem> createState() => _FavouriteListItemState();
 }
@@ -18,8 +22,12 @@ class _FavouriteListItemState extends State<FavouriteListItem> {
   Widget build(BuildContext context) {
     return Dismissible(
       key: UniqueKey(),
-      onDismissed: (direction) {
-        if (direction == DismissDirection.endToStart) {}
+      onDismissed: (direction) async {
+        if (direction == DismissDirection.endToStart) {
+          await context.read<FavouritesCubit>().deleteFavourite({
+            "product_id": widget.products.id.toString(),
+          });
+        }
       },
       direction: DismissDirection.endToStart,
       background: Container(
@@ -42,17 +50,26 @@ class _FavouriteListItemState extends State<FavouriteListItem> {
               Radius.circular(24.r),
             ),
           ),
-          child: Image.asset(
-            "lib/core/assets/png/headphoneTest.png",
-            height: 100.h,
-          ),
+          child: widget.products.image == ""
+              ? Image.asset(
+                  "lib/core/assets/png/headphoneTest.png",
+                  height: 100.h,
+                )
+              : CachedNetworkImage(
+                  placeholder: (context, url) =>
+                      const CircularProgressIndicator(
+                    color: AppColors.mainBlack,
+                  ),
+                  imageUrl: widget.products.image,
+                  height: 100.h,
+                ),
         ),
         horizontalSpace(12),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "\$" "209.99",
+              "${widget.products.price} \$",
               style: TextStyles.heading3.copyWith(
                   color: AppColors.mainBlack, fontWeight: FontWeight.w800),
             ),
@@ -60,7 +77,7 @@ class _FavouriteListItemState extends State<FavouriteListItem> {
               width: 152.w,
               height: 32.h,
               child: Text(
-                "SONY Premium Wireless Headphones",
+                widget.products.name,
                 style: TextStyles.heading3.copyWith(
                   color: AppColors.mainBlack,
                   height: 1.h,

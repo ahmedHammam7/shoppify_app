@@ -32,19 +32,17 @@ class HomeScreenBody extends StatelessWidget {
             builder: (context, state) {
               state.whenOrNull(
                 homeLoading: () {
-                  widget = const HomeLoadingWidget(
-                    isLoading: true,
-                  );
+                  widget = const HomeLoadingWidget();
                 },
                 homeSuccess: (homeResponse) {
                   widget = homeSuccess(homeResponse, context);
                 },
                 homeFailure: (error) {
                   setupErrorState(context, error);
-                  widget = const HomeLoadingWidget(isLoading: true);
+                  widget = const HomeLoadingWidget();
                 },
               );
-              return widget ?? const HomeLoadingWidget(isLoading: true);
+              return widget ?? const HomeLoadingWidget();
             }));
   }
 }

@@ -10,12 +10,14 @@ import 'package:shoppify_app/features/home/ui/widgets/recomeded_list_item.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class HomeLoadingWidget extends StatelessWidget {
-  const HomeLoadingWidget({super.key, required this.isLoading});
-  final bool isLoading;
+  const HomeLoadingWidget({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Skeletonizer(
-      enabled: isLoading,
+      enabled: true,
       child: CustomScrollView(
         slivers: [
           SliverList(
