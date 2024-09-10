@@ -7,7 +7,6 @@ import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/search/data/models/search_response.dart';
 import 'package:shoppify_app/features/search/logic/cubit/search_cubit.dart';
-import 'package:shoppify_app/features/search/ui/views/widgets/search_body.dart';
 
 class DetailsScreenBody extends StatefulWidget {
   const DetailsScreenBody({super.key, required this.data});
@@ -87,7 +86,11 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
                       backgroundColor: AppColors.white,
                       radius: 17.r,
                       child: IconButton(
-                        onPressed: () {
+                        onPressed: () async {
+                          await context
+                              .read<SearchCubit>()
+                              .addCart(widget.data.id.toString());
+                          widget.data.inCart = !widget.data.inCart;
                           setState(() {});
                         },
                         icon: widget.data.inCart

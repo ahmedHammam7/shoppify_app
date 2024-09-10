@@ -8,4 +8,5 @@ class ApiConstants {
 
   static const String favorites = 'favorites';
   static const String search = 'products/search';
+  static const String cart = 'carts';
 }

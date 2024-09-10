@@ -8,16 +8,9 @@ import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/favourite/data/models/all_favourites_response.dart';
 import 'package:shoppify_app/features/favourite/logic/cubit/favourites_cubit.dart';
 
-class FavouriteListItem extends StatefulWidget {
+class FavouriteListItem extends StatelessWidget {
   const FavouriteListItem({super.key, required this.products});
   final AllFavouriteDataDataProducts products;
-  @override
-  State<FavouriteListItem> createState() => _FavouriteListItemState();
-}
-
-bool inCart = false;
-
-class _FavouriteListItemState extends State<FavouriteListItem> {
   @override
   Widget build(BuildContext context) {
     return Dismissible(
@@ -25,7 +18,7 @@ class _FavouriteListItemState extends State<FavouriteListItem> {
       onDismissed: (direction) async {
         if (direction == DismissDirection.endToStart) {
           await context.read<FavouritesCubit>().deleteFavourite({
-            "product_id": widget.products.id.toString(),
+            "product_id": products.id.toString(),
           });
         }
       },
@@ -50,7 +43,7 @@ class _FavouriteListItemState extends State<FavouriteListItem> {
               Radius.circular(24.r),
             ),
           ),
-          child: widget.products.image == ""
+          child: products.image == ""
               ? Image.asset(
                   "lib/core/assets/png/headphoneTest.png",
                   height: 100.h,
@@ -60,7 +53,7 @@ class _FavouriteListItemState extends State<FavouriteListItem> {
                       const CircularProgressIndicator(
                     color: AppColors.mainBlack,
                   ),
-                  imageUrl: widget.products.image,
+                  imageUrl: products.image,
                   height: 100.h,
                 ),
         ),
@@ -69,7 +62,7 @@ class _FavouriteListItemState extends State<FavouriteListItem> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "${widget.products.price} \$",
+              "${products.price} \$",
               style: TextStyles.heading3.copyWith(
                   color: AppColors.mainBlack, fontWeight: FontWeight.w800),
             ),
@@ -77,7 +70,7 @@ class _FavouriteListItemState extends State<FavouriteListItem> {
               width: 152.w,
               height: 32.h,
               child: Text(
-                widget.products.name,
+                products.name,
                 style: TextStyles.heading3.copyWith(
                   color: AppColors.mainBlack,
                   height: 1.h,
@@ -103,22 +96,16 @@ class _FavouriteListItemState extends State<FavouriteListItem> {
               color: AppColors.textFieldBackground,
               borderRadius: BorderRadius.circular(12.r)),
           child: IconButton(
-            onPressed: () {
-              setState(() {
-                inCart = !inCart;
-              });
+            onPressed: () async {
+              await context.read<FavouritesCubit>().addCart(
+                    products.id.toString(),
+                  );
             },
-            icon: inCart
-                ? Icon(
-                    Icons.shopping_cart,
-                    color: AppColors.mainBlack,
-                    size: 20.sp,
-                  )
-                : Icon(
-                    Icons.shopping_cart_outlined,
-                    color: AppColors.mainBlack,
-                    size: 20.sp,
-                  ),
+            icon: Icon(
+              Icons.shopping_cart_outlined,
+              color: AppColors.mainBlack,
+              size: 20.sp,
+            ),
           ),
         ),
       ]),
