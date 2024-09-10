@@ -5,6 +5,8 @@ import 'package:shoppify_app/features/auth/data/models/login/login_request.dart'
 import 'package:shoppify_app/features/auth/data/models/login/login_response.dart';
 import 'package:shoppify_app/features/auth/data/models/register/register_request.dart';
 import 'package:shoppify_app/features/auth/data/models/register/register_response.dart';
+import 'package:shoppify_app/features/cart/data/models/add_cart_response.dart';
+import 'package:shoppify_app/features/cart/data/models/get_carts_response.dart';
 import 'package:shoppify_app/features/favourite/data/models/all_favourites_response.dart';
 import 'package:shoppify_app/features/favourite/data/models/favourite_response.dart';
 import 'package:shoppify_app/features/home/data/models/home_response.dart';
@@ -32,5 +34,13 @@ abstract class ApiService {
       @Header('Authorization') String token, @Header('lang') String lang);
   @POST(ApiConstants.search)
   Future<SearchResponse> search(@Body() Map<String, dynamic> body,
+      @Header('Authorization') String token, @Header('lang') String lang);
+
+  @POST(ApiConstants.cart)
+  Future<AddCartResponse> addCart(@Body() Map<String, dynamic> body,
+      @Header('Authorization') String token, @Header('lang') String lang);
+
+  @GET(ApiConstants.cart)
+  Future<GetCartsResponse> getCart(
       @Header('Authorization') String token, @Header('lang') String lang);
 }

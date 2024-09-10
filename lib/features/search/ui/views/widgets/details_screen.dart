@@ -20,7 +20,7 @@ class DetailsScreen extends StatelessWidget {
             icon: const Icon(Icons.chevron_left)),
       ),
       body: BlocProvider(
-        create: (context) => SearchCubit(getIt(), getIt()),
+        create: (context) => SearchCubit(getIt(), getIt(), getIt()),
         child: DetailsScreenBody(
           data: data,
         ),
