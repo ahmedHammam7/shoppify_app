@@ -8,6 +8,7 @@ part of 'register_response.dart';
 
 RegisterResponse _$RegisterResponseFromJson(Map<String, dynamic> json) =>
     RegisterResponse(
+      json['status'] as bool,
       message: json['message'] as String,
       data: json['data'] == null
           ? null
@@ -16,6 +17,7 @@ RegisterResponse _$RegisterResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$RegisterResponseToJson(RegisterResponse instance) =>
     <String, dynamic>{
+      'status': instance.status,
       'message': instance.message,
       'data': instance.data,
     };

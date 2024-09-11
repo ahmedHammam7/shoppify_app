@@ -22,10 +22,6 @@ mixin _$HomeState<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
-    required TResult Function() favouriteLoading,
-    required TResult Function(FavouriteResponse favouriteResponse)
-        favouriteSuccess,
-    required TResult Function(String error) favouriteError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,9 +30,6 @@ mixin _$HomeState<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
-    TResult? Function()? favouriteLoading,
-    TResult? Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult? Function(String error)? favouriteError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -45,9 +38,6 @@ mixin _$HomeState<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
-    TResult Function()? favouriteLoading,
-    TResult Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult Function(String error)? favouriteError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -57,9 +47,6 @@ mixin _$HomeState<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
-    required TResult Function(FavouriteLoading<T> value) favouriteLoading,
-    required TResult Function(FavouriteSuccess<T> value) favouriteSuccess,
-    required TResult Function(FavouriteError<T> value) favouriteError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,9 +55,6 @@ mixin _$HomeState<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
-    TResult? Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult? Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult? Function(FavouriteError<T> value)? favouriteError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -79,9 +63,6 @@ mixin _$HomeState<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
-    TResult Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult Function(FavouriteError<T> value)? favouriteError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -153,10 +134,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
-    required TResult Function() favouriteLoading,
-    required TResult Function(FavouriteResponse favouriteResponse)
-        favouriteSuccess,
-    required TResult Function(String error) favouriteError,
   }) {
     return initial();
   }
@@ -168,9 +145,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
-    TResult? Function()? favouriteLoading,
-    TResult? Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult? Function(String error)? favouriteError,
   }) {
     return initial?.call();
   }
@@ -182,9 +156,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
-    TResult Function()? favouriteLoading,
-    TResult Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult Function(String error)? favouriteError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -200,9 +171,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
-    required TResult Function(FavouriteLoading<T> value) favouriteLoading,
-    required TResult Function(FavouriteSuccess<T> value) favouriteSuccess,
-    required TResult Function(FavouriteError<T> value) favouriteError,
   }) {
     return initial(this);
   }
@@ -214,9 +182,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
-    TResult? Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult? Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult? Function(FavouriteError<T> value)? favouriteError,
   }) {
     return initial?.call(this);
   }
@@ -228,9 +193,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
-    TResult Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult Function(FavouriteError<T> value)? favouriteError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -289,10 +251,6 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
-    required TResult Function() favouriteLoading,
-    required TResult Function(FavouriteResponse favouriteResponse)
-        favouriteSuccess,
-    required TResult Function(String error) favouriteError,
   }) {
     return homeLoading();
   }
@@ -304,9 +262,6 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
-    TResult? Function()? favouriteLoading,
-    TResult? Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult? Function(String error)? favouriteError,
   }) {
     return homeLoading?.call();
   }
@@ -318,9 +273,6 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
-    TResult Function()? favouriteLoading,
-    TResult Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult Function(String error)? favouriteError,
     required TResult orElse(),
   }) {
     if (homeLoading != null) {
@@ -336,9 +288,6 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
-    required TResult Function(FavouriteLoading<T> value) favouriteLoading,
-    required TResult Function(FavouriteSuccess<T> value) favouriteSuccess,
-    required TResult Function(FavouriteError<T> value) favouriteError,
   }) {
     return homeLoading(this);
   }
@@ -350,9 +299,6 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
-    TResult? Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult? Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult? Function(FavouriteError<T> value)? favouriteError,
   }) {
     return homeLoading?.call(this);
   }
@@ -364,9 +310,6 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
-    TResult Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult Function(FavouriteError<T> value)? favouriteError,
     required TResult orElse(),
   }) {
     if (homeLoading != null) {
@@ -454,10 +397,6 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
-    required TResult Function() favouriteLoading,
-    required TResult Function(FavouriteResponse favouriteResponse)
-        favouriteSuccess,
-    required TResult Function(String error) favouriteError,
   }) {
     return homeSuccess(homeResponse);
   }
@@ -469,9 +408,6 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
-    TResult? Function()? favouriteLoading,
-    TResult? Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult? Function(String error)? favouriteError,
   }) {
     return homeSuccess?.call(homeResponse);
   }
@@ -483,9 +419,6 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
-    TResult Function()? favouriteLoading,
-    TResult Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult Function(String error)? favouriteError,
     required TResult orElse(),
   }) {
     if (homeSuccess != null) {
@@ -501,9 +434,6 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
-    required TResult Function(FavouriteLoading<T> value) favouriteLoading,
-    required TResult Function(FavouriteSuccess<T> value) favouriteSuccess,
-    required TResult Function(FavouriteError<T> value) favouriteError,
   }) {
     return homeSuccess(this);
   }
@@ -515,9 +445,6 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
-    TResult? Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult? Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult? Function(FavouriteError<T> value)? favouriteError,
   }) {
     return homeSuccess?.call(this);
   }
@@ -529,9 +456,6 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
-    TResult Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult Function(FavouriteError<T> value)? favouriteError,
     required TResult orElse(),
   }) {
     if (homeSuccess != null) {
@@ -627,10 +551,6 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
-    required TResult Function() favouriteLoading,
-    required TResult Function(FavouriteResponse favouriteResponse)
-        favouriteSuccess,
-    required TResult Function(String error) favouriteError,
   }) {
     return homeFailure(error);
   }
@@ -642,9 +562,6 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
-    TResult? Function()? favouriteLoading,
-    TResult? Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult? Function(String error)? favouriteError,
   }) {
     return homeFailure?.call(error);
   }
@@ -656,9 +573,6 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
-    TResult Function()? favouriteLoading,
-    TResult Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult Function(String error)? favouriteError,
     required TResult orElse(),
   }) {
     if (homeFailure != null) {
@@ -674,9 +588,6 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
-    required TResult Function(FavouriteLoading<T> value) favouriteLoading,
-    required TResult Function(FavouriteSuccess<T> value) favouriteSuccess,
-    required TResult Function(FavouriteError<T> value) favouriteError,
   }) {
     return homeFailure(this);
   }
@@ -688,9 +599,6 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
-    TResult? Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult? Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult? Function(FavouriteError<T> value)? favouriteError,
   }) {
     return homeFailure?.call(this);
   }
@@ -702,9 +610,6 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
-    TResult Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult Function(FavouriteError<T> value)? favouriteError,
     required TResult orElse(),
   }) {
     if (homeFailure != null) {
@@ -723,488 +628,5 @@ abstract class HomeFailure<T> implements HomeState<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HomeFailureImplCopyWith<T, _$HomeFailureImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FavouriteLoadingImplCopyWith<T, $Res> {
-  factory _$$FavouriteLoadingImplCopyWith(_$FavouriteLoadingImpl<T> value,
-          $Res Function(_$FavouriteLoadingImpl<T>) then) =
-      __$$FavouriteLoadingImplCopyWithImpl<T, $Res>;
-}
-
-/// @nodoc
-class __$$FavouriteLoadingImplCopyWithImpl<T, $Res>
-    extends _$HomeStateCopyWithImpl<T, $Res, _$FavouriteLoadingImpl<T>>
-    implements _$$FavouriteLoadingImplCopyWith<T, $Res> {
-  __$$FavouriteLoadingImplCopyWithImpl(_$FavouriteLoadingImpl<T> _value,
-      $Res Function(_$FavouriteLoadingImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$FavouriteLoadingImpl<T> implements FavouriteLoading<T> {
-  const _$FavouriteLoadingImpl();
-
-  @override
-  String toString() {
-    return 'HomeState<$T>.favouriteLoading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FavouriteLoadingImpl<T>);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() homeLoading,
-    required TResult Function(HomeResponse homeResponse) homeSuccess,
-    required TResult Function(String error) homeFailure,
-    required TResult Function() favouriteLoading,
-    required TResult Function(FavouriteResponse favouriteResponse)
-        favouriteSuccess,
-    required TResult Function(String error) favouriteError,
-  }) {
-    return favouriteLoading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? homeLoading,
-    TResult? Function(HomeResponse homeResponse)? homeSuccess,
-    TResult? Function(String error)? homeFailure,
-    TResult? Function()? favouriteLoading,
-    TResult? Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult? Function(String error)? favouriteError,
-  }) {
-    return favouriteLoading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? homeLoading,
-    TResult Function(HomeResponse homeResponse)? homeSuccess,
-    TResult Function(String error)? homeFailure,
-    TResult Function()? favouriteLoading,
-    TResult Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult Function(String error)? favouriteError,
-    required TResult orElse(),
-  }) {
-    if (favouriteLoading != null) {
-      return favouriteLoading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(HomeLoading<T> value) homeLoading,
-    required TResult Function(HomeSuccess<T> value) homeSuccess,
-    required TResult Function(HomeFailure<T> value) homeFailure,
-    required TResult Function(FavouriteLoading<T> value) favouriteLoading,
-    required TResult Function(FavouriteSuccess<T> value) favouriteSuccess,
-    required TResult Function(FavouriteError<T> value) favouriteError,
-  }) {
-    return favouriteLoading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(HomeLoading<T> value)? homeLoading,
-    TResult? Function(HomeSuccess<T> value)? homeSuccess,
-    TResult? Function(HomeFailure<T> value)? homeFailure,
-    TResult? Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult? Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult? Function(FavouriteError<T> value)? favouriteError,
-  }) {
-    return favouriteLoading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(HomeLoading<T> value)? homeLoading,
-    TResult Function(HomeSuccess<T> value)? homeSuccess,
-    TResult Function(HomeFailure<T> value)? homeFailure,
-    TResult Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult Function(FavouriteError<T> value)? favouriteError,
-    required TResult orElse(),
-  }) {
-    if (favouriteLoading != null) {
-      return favouriteLoading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FavouriteLoading<T> implements HomeState<T> {
-  const factory FavouriteLoading() = _$FavouriteLoadingImpl<T>;
-}
-
-/// @nodoc
-abstract class _$$FavouriteSuccessImplCopyWith<T, $Res> {
-  factory _$$FavouriteSuccessImplCopyWith(_$FavouriteSuccessImpl<T> value,
-          $Res Function(_$FavouriteSuccessImpl<T>) then) =
-      __$$FavouriteSuccessImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({FavouriteResponse favouriteResponse});
-}
-
-/// @nodoc
-class __$$FavouriteSuccessImplCopyWithImpl<T, $Res>
-    extends _$HomeStateCopyWithImpl<T, $Res, _$FavouriteSuccessImpl<T>>
-    implements _$$FavouriteSuccessImplCopyWith<T, $Res> {
-  __$$FavouriteSuccessImplCopyWithImpl(_$FavouriteSuccessImpl<T> _value,
-      $Res Function(_$FavouriteSuccessImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? favouriteResponse = null,
-  }) {
-    return _then(_$FavouriteSuccessImpl<T>(
-      null == favouriteResponse
-          ? _value.favouriteResponse
-          : favouriteResponse // ignore: cast_nullable_to_non_nullable
-              as FavouriteResponse,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FavouriteSuccessImpl<T> implements FavouriteSuccess<T> {
-  const _$FavouriteSuccessImpl(this.favouriteResponse);
-
-  @override
-  final FavouriteResponse favouriteResponse;
-
-  @override
-  String toString() {
-    return 'HomeState<$T>.favouriteSuccess(favouriteResponse: $favouriteResponse)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FavouriteSuccessImpl<T> &&
-            (identical(other.favouriteResponse, favouriteResponse) ||
-                other.favouriteResponse == favouriteResponse));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, favouriteResponse);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FavouriteSuccessImplCopyWith<T, _$FavouriteSuccessImpl<T>> get copyWith =>
-      __$$FavouriteSuccessImplCopyWithImpl<T, _$FavouriteSuccessImpl<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() homeLoading,
-    required TResult Function(HomeResponse homeResponse) homeSuccess,
-    required TResult Function(String error) homeFailure,
-    required TResult Function() favouriteLoading,
-    required TResult Function(FavouriteResponse favouriteResponse)
-        favouriteSuccess,
-    required TResult Function(String error) favouriteError,
-  }) {
-    return favouriteSuccess(favouriteResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? homeLoading,
-    TResult? Function(HomeResponse homeResponse)? homeSuccess,
-    TResult? Function(String error)? homeFailure,
-    TResult? Function()? favouriteLoading,
-    TResult? Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult? Function(String error)? favouriteError,
-  }) {
-    return favouriteSuccess?.call(favouriteResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? homeLoading,
-    TResult Function(HomeResponse homeResponse)? homeSuccess,
-    TResult Function(String error)? homeFailure,
-    TResult Function()? favouriteLoading,
-    TResult Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult Function(String error)? favouriteError,
-    required TResult orElse(),
-  }) {
-    if (favouriteSuccess != null) {
-      return favouriteSuccess(favouriteResponse);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(HomeLoading<T> value) homeLoading,
-    required TResult Function(HomeSuccess<T> value) homeSuccess,
-    required TResult Function(HomeFailure<T> value) homeFailure,
-    required TResult Function(FavouriteLoading<T> value) favouriteLoading,
-    required TResult Function(FavouriteSuccess<T> value) favouriteSuccess,
-    required TResult Function(FavouriteError<T> value) favouriteError,
-  }) {
-    return favouriteSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(HomeLoading<T> value)? homeLoading,
-    TResult? Function(HomeSuccess<T> value)? homeSuccess,
-    TResult? Function(HomeFailure<T> value)? homeFailure,
-    TResult? Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult? Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult? Function(FavouriteError<T> value)? favouriteError,
-  }) {
-    return favouriteSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(HomeLoading<T> value)? homeLoading,
-    TResult Function(HomeSuccess<T> value)? homeSuccess,
-    TResult Function(HomeFailure<T> value)? homeFailure,
-    TResult Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult Function(FavouriteError<T> value)? favouriteError,
-    required TResult orElse(),
-  }) {
-    if (favouriteSuccess != null) {
-      return favouriteSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FavouriteSuccess<T> implements HomeState<T> {
-  const factory FavouriteSuccess(final FavouriteResponse favouriteResponse) =
-      _$FavouriteSuccessImpl<T>;
-
-  FavouriteResponse get favouriteResponse;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FavouriteSuccessImplCopyWith<T, _$FavouriteSuccessImpl<T>> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$FavouriteErrorImplCopyWith<T, $Res> {
-  factory _$$FavouriteErrorImplCopyWith(_$FavouriteErrorImpl<T> value,
-          $Res Function(_$FavouriteErrorImpl<T>) then) =
-      __$$FavouriteErrorImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({String error});
-}
-
-/// @nodoc
-class __$$FavouriteErrorImplCopyWithImpl<T, $Res>
-    extends _$HomeStateCopyWithImpl<T, $Res, _$FavouriteErrorImpl<T>>
-    implements _$$FavouriteErrorImplCopyWith<T, $Res> {
-  __$$FavouriteErrorImplCopyWithImpl(_$FavouriteErrorImpl<T> _value,
-      $Res Function(_$FavouriteErrorImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? error = null,
-  }) {
-    return _then(_$FavouriteErrorImpl<T>(
-      null == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FavouriteErrorImpl<T> implements FavouriteError<T> {
-  const _$FavouriteErrorImpl(this.error);
-
-  @override
-  final String error;
-
-  @override
-  String toString() {
-    return 'HomeState<$T>.favouriteError(error: $error)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FavouriteErrorImpl<T> &&
-            (identical(other.error, error) || other.error == error));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, error);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FavouriteErrorImplCopyWith<T, _$FavouriteErrorImpl<T>> get copyWith =>
-      __$$FavouriteErrorImplCopyWithImpl<T, _$FavouriteErrorImpl<T>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() homeLoading,
-    required TResult Function(HomeResponse homeResponse) homeSuccess,
-    required TResult Function(String error) homeFailure,
-    required TResult Function() favouriteLoading,
-    required TResult Function(FavouriteResponse favouriteResponse)
-        favouriteSuccess,
-    required TResult Function(String error) favouriteError,
-  }) {
-    return favouriteError(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? homeLoading,
-    TResult? Function(HomeResponse homeResponse)? homeSuccess,
-    TResult? Function(String error)? homeFailure,
-    TResult? Function()? favouriteLoading,
-    TResult? Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult? Function(String error)? favouriteError,
-  }) {
-    return favouriteError?.call(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? homeLoading,
-    TResult Function(HomeResponse homeResponse)? homeSuccess,
-    TResult Function(String error)? homeFailure,
-    TResult Function()? favouriteLoading,
-    TResult Function(FavouriteResponse favouriteResponse)? favouriteSuccess,
-    TResult Function(String error)? favouriteError,
-    required TResult orElse(),
-  }) {
-    if (favouriteError != null) {
-      return favouriteError(error);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(HomeLoading<T> value) homeLoading,
-    required TResult Function(HomeSuccess<T> value) homeSuccess,
-    required TResult Function(HomeFailure<T> value) homeFailure,
-    required TResult Function(FavouriteLoading<T> value) favouriteLoading,
-    required TResult Function(FavouriteSuccess<T> value) favouriteSuccess,
-    required TResult Function(FavouriteError<T> value) favouriteError,
-  }) {
-    return favouriteError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(HomeLoading<T> value)? homeLoading,
-    TResult? Function(HomeSuccess<T> value)? homeSuccess,
-    TResult? Function(HomeFailure<T> value)? homeFailure,
-    TResult? Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult? Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult? Function(FavouriteError<T> value)? favouriteError,
-  }) {
-    return favouriteError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(HomeLoading<T> value)? homeLoading,
-    TResult Function(HomeSuccess<T> value)? homeSuccess,
-    TResult Function(HomeFailure<T> value)? homeFailure,
-    TResult Function(FavouriteLoading<T> value)? favouriteLoading,
-    TResult Function(FavouriteSuccess<T> value)? favouriteSuccess,
-    TResult Function(FavouriteError<T> value)? favouriteError,
-    required TResult orElse(),
-  }) {
-    if (favouriteError != null) {
-      return favouriteError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class FavouriteError<T> implements HomeState<T> {
-  const factory FavouriteError(final String error) = _$FavouriteErrorImpl<T>;
-
-  String get error;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FavouriteErrorImplCopyWith<T, _$FavouriteErrorImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
