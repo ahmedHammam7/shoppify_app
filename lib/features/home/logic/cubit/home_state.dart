@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shoppify_app/features/favourite/data/models/favourite_response.dart';
 import 'package:shoppify_app/features/home/data/models/home_response.dart';
 part 'home_state.freezed.dart';
 
@@ -11,11 +10,4 @@ class HomeState<T> with _$HomeState<T> {
   const factory HomeState.homeSuccess(HomeResponse homeResponse) = HomeSuccess;
 
   const factory HomeState.homeFailure(String error) = HomeFailure;
-  //favoutite button
-  const factory HomeState.favouriteLoading() = FavouriteLoading;
-
-  const factory HomeState.favouriteSuccess(
-      FavouriteResponse favouriteResponse) = FavouriteSuccess;
-
-  const factory HomeState.favouriteError(String error) = FavouriteError;
 }

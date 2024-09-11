@@ -7,6 +7,7 @@ import 'package:shoppify_app/features/auth/ui/login/views/login_screen.dart';
 import 'package:shoppify_app/features/auth/ui/register/view/register_screen.dart';
 import 'package:shoppify_app/features/cart/ui/views/cart_screen.dart';
 import 'package:shoppify_app/features/favourite/ui/views/favourite_screen.dart';
+import 'package:shoppify_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:shoppify_app/features/home/ui/views/home_screen.dart';
 import 'package:shoppify_app/features/home/ui/views/home_layout.dart';
 import 'package:shoppify_app/features/search/data/models/search_response.dart';

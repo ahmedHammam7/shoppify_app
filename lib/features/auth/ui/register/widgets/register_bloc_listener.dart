@@ -32,7 +32,11 @@ class RegisterBlocListener extends StatelessWidget {
             },
             success: (registerResponse) {
               context.pop();
-              showSuccessDialog(context);
+              if (registerResponse.status) {
+                showSuccessDialog(context);
+              } else {
+                setupErrorState(context, registerResponse.message);
+              }
             },
             error: (message) {
               context.pop();

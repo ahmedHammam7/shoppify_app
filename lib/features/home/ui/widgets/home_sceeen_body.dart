@@ -25,10 +25,7 @@ class HomeScreenBody extends StatelessWidget {
             buildWhen: (previous, current) =>
                 current is HomeSuccess ||
                 current is HomeLoading ||
-                current is HomeFailure ||
-                current is FavouriteSuccess ||
-                current is FavouriteLoading ||
-                current is FavouriteError,
+                current is HomeFailure,
             builder: (context, state) {
               state.whenOrNull(
                 homeLoading: () {
