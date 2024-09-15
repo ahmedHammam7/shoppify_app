@@ -6,6 +6,7 @@ import 'package:shoppify_app/features/cart/ui/views/cart_screen.dart';
 import 'package:shoppify_app/features/favourite/ui/views/favourite_screen.dart';
 import 'package:shoppify_app/features/home/logic/cubit/home_cubit.dart';
 import 'package:shoppify_app/features/home/ui/views/home_screen.dart';
+import 'package:shoppify_app/features/profile/ui/views/profile_screen.dart';
 import 'package:shoppify_app/features/search/ui/views/search_screen.dart';
 
 class HomeLayout extends StatefulWidget {
@@ -21,6 +22,7 @@ List<Widget> screens = const [
   SearchScreen(),
   FavouriteScreen(),
   CartScreen(),
+  ProfileScreen(),
 ];
 
 void changeIndex(int index) {
@@ -33,6 +35,7 @@ class _HomeLayoutState extends State<HomeLayout> {
     return Scaffold(
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           selectedItemColor: AppColors.mainBlack,
           selectedLabelStyle: TextStyles.caption2,
           unselectedItemColor: AppColors.lightGray,
@@ -52,6 +55,8 @@ class _HomeLayoutState extends State<HomeLayout> {
                 label: "Favourites"),
             const BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart_outlined), label: "Cart"),
+            const BottomNavigationBarItem(
+                icon: Icon(Icons.person_outlined), label: "Profile"),
           ],
           currentIndex: currentIndex,
           onTap: (index) {

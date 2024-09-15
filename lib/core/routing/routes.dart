@@ -7,4 +7,5 @@ class Routes {
   static const String favoriteScreen = '/FavoriteScreen';
   static const String cartScreen = '/CartScreen';
   static const String homeLayout = '/HomeLayout';
+  static const String profileScreen = '/ProfileScreen';
 }

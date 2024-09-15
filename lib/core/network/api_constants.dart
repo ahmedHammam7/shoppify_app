@@ -9,4 +9,6 @@ class ApiConstants {
   static const String favorites = 'favorites';
   static const String search = 'products/search';
   static const String cart = 'carts';
+  static const String profile = "profile";
+  static const String logout = 'logout';
 }

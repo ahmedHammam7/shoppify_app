@@ -7,6 +7,7 @@ import 'package:shoppify_app/features/auth/data/repos/register_repo.dart';
 import 'package:shoppify_app/features/cart/data/repos/cart_repos.dart';
 import 'package:shoppify_app/features/favourite/data/repos/favourite_repos.dart';
 import 'package:shoppify_app/features/home/data/repos/home_repo.dart';
+import 'package:shoppify_app/features/profile/data/repo/profile_repo.dart';
 import 'package:shoppify_app/features/search/data/repos/search_repos.dart';
 
 final getIt = GetIt.instance;
@@ -21,4 +22,5 @@ Future<void> setupGetit() async {
   getIt.registerLazySingleton<FavouriteRepos>(() => FavouriteRepos(getIt()));
   getIt.registerLazySingleton<SearchRepos>(() => SearchRepos(getIt()));
   getIt.registerLazySingleton<CartRepos>(() => CartRepos(getIt()));
+  getIt.registerLazySingleton<ProfileRepo>(() => ProfileRepo(getIt()));
 }
