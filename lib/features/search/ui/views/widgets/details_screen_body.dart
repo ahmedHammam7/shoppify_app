@@ -2,9 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/search/data/models/search_response.dart';
 import 'package:shoppify_app/features/search/logic/cubit/search_cubit.dart';
 
@@ -32,7 +32,9 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
                     width: MediaQuery.sizeOf(context).width * 0.95,
                     height: MediaQuery.sizeOf(context).height * 0.4,
                     decoration: BoxDecoration(
-                      color: AppColors.textFieldBackground,
+                      color: isDarkMode
+                          ? AppColors.mainBlack
+                          : AppColors.textFieldBackground,
                       borderRadius: BorderRadius.all(
                         Radius.circular(24.r),
                       ),
@@ -44,8 +46,10 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
                           )
                         : CachedNetworkImage(
                             placeholder: (context, url) =>
-                                const CircularProgressIndicator(
-                              color: AppColors.mainBlack,
+                                CircularProgressIndicator(
+                              color: isDarkMode
+                                  ? AppColors.white
+                                  : AppColors.mainBlack,
                             ),
                             imageUrl: widget.data.image,
                             height: 100.h,
@@ -54,57 +58,49 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
                   Positioned(
                     bottom: 60.h,
                     right: 15.w,
-                    child: CircleAvatar(
-                      backgroundColor: AppColors.white,
-                      radius: 17.r,
-                      child: IconButton(
-                        onPressed: () async {
-                          await context.read<SearchCubit>().addFavourites({
-                            "product_id": widget.data.id,
-                          });
-                          widget.data.inFavorites = !widget.data.inFavorites;
-                          setState(() {});
-                        },
-                        icon: widget.data.inFavorites
-                            ? Icon(
-                                Icons.favorite,
-                                color: AppColors.mainBlack,
-                                size: 18.sp,
-                              )
-                            : Icon(
-                                Icons.favorite_border_outlined,
-                                color: AppColors.mainBlack,
-                                size: 18.sp,
-                              ),
-                      ),
+                    child: IconButton(
+                      onPressed: () async {
+                        await context.read<SearchCubit>().addFavourites({
+                          "product_id": widget.data.id,
+                        });
+                        widget.data.inFavorites = !widget.data.inFavorites;
+                        setState(() {});
+                      },
+                      icon: widget.data.inFavorites
+                          ? Icon(
+                              Icons.favorite,
+                              color: AppColors.red,
+                              size: 18.sp,
+                            )
+                          : Icon(
+                              Icons.favorite_border_outlined,
+                              color: AppColors.red,
+                              size: 18.sp,
+                            ),
                     ),
                   ),
                   Positioned(
                     bottom: 15.h,
                     right: 15.w,
-                    child: CircleAvatar(
-                      backgroundColor: AppColors.white,
-                      radius: 17.r,
-                      child: IconButton(
-                        onPressed: () async {
-                          await context
-                              .read<SearchCubit>()
-                              .addCart(widget.data.id.toString());
-                          widget.data.inCart = !widget.data.inCart;
-                          setState(() {});
-                        },
-                        icon: widget.data.inCart
-                            ? Icon(
-                                Icons.shopping_cart,
-                                color: AppColors.mainBlack,
-                                size: 18.sp,
-                              )
-                            : Icon(
-                                Icons.shopping_cart_outlined,
-                                color: AppColors.mainBlack,
-                                size: 18.sp,
-                              ),
-                      ),
+                    child: IconButton(
+                      onPressed: () async {
+                        await context
+                            .read<SearchCubit>()
+                            .addCart(widget.data.id.toString());
+                        widget.data.inCart = !widget.data.inCart;
+                        setState(() {});
+                      },
+                      icon: widget.data.inCart
+                          ? Icon(
+                              Icons.shopping_cart,
+                              color: AppColors.mainBlack,
+                              size: 18.sp,
+                            )
+                          : Icon(
+                              Icons.shopping_cart_outlined,
+                              color: AppColors.mainBlack,
+                              size: 18.sp,
+                            ),
                     ),
                   ),
                 ],
@@ -112,27 +108,38 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
               verticalSpace(15),
               Text(
                 "${widget.data.price.toString()}\$",
-                style:
-                    TextStyles.heading2.copyWith(fontWeight: FontWeight.w800),
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineMedium
+                    ?.copyWith(fontWeight: FontWeight.w800),
               ),
               SizedBox(
                 width: MediaQuery.sizeOf(context).width * 0.7,
                 child: Text(
                   widget.data.name,
-                  style: TextStyles.heading2.copyWith(height: 1),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineMedium
+                      ?.copyWith(height: 1),
                 ),
               ),
               SizedBox(
                 width: MediaQuery.sizeOf(context).width * 0.6,
                 child: Text(
                   "Model: WH-1000XM4, Black",
-                  style: TextStyles.body2.copyWith(height: 1.5),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium
+                      ?.copyWith(height: 1.5),
                 ),
               ),
               verticalSpace(15),
               Text(
                 widget.data.description,
-                style: TextStyles.body2.copyWith(height: 1.5),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium
+                    ?.copyWith(height: 1.5),
               ),
             ],
           ),

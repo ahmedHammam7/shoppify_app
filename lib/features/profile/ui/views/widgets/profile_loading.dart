@@ -27,7 +27,7 @@ class ProfileLoading extends StatelessWidget {
                 verticalSpace(20),
                 const ProfileDataItem(text: "ahmed@gmail.com"),
                 verticalSpace(30),
-                AppButton(text: "Logout", color: Colors.red, onTap: () {}),
+                AppButton(text: "Logout", onTap: () {}),
               ],
             ),
           ),

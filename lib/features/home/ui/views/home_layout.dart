@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/cart/ui/views/cart_screen.dart';
 import 'package:shoppify_app/features/favourite/ui/views/favourite_screen.dart';
-import 'package:shoppify_app/features/home/logic/cubit/home_cubit.dart';
+import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
 import 'package:shoppify_app/features/home/ui/views/home_screen.dart';
 import 'package:shoppify_app/features/profile/ui/views/profile_screen.dart';
 import 'package:shoppify_app/features/search/ui/views/search_screen.dart';
@@ -36,7 +37,6 @@ class _HomeLayoutState extends State<HomeLayout> {
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: AppColors.mainBlack,
           selectedLabelStyle: TextStyles.caption2,
           unselectedItemColor: AppColors.lightGray,
           showUnselectedLabels: true,
@@ -49,9 +49,18 @@ class _HomeLayoutState extends State<HomeLayout> {
                 icon: Icon(Icons.search), label: "Browse"),
             BottomNavigationBarItem(
                 icon: Badge.count(
-                    backgroundColor: AppColors.mainBlack,
+                    backgroundColor:
+                        isDarkMode ? AppColors.white : AppColors.mainBlack,
+                    textColor:
+                        isDarkMode ? AppColors.mainBlack : AppColors.white,
                     count: context.read<HomeCubit>().favouriteCount,
-                    child: const Icon(Icons.favorite_border)),
+                    child: IconButton(
+                        icon: const Icon(Icons.favorite_border),
+                        onPressed: () {
+                          setState(() {
+                            changeIndex(2);
+                          });
+                        })),
                 label: "Favourites"),
             const BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart_outlined), label: "Cart"),

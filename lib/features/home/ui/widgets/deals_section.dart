@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 
 class DealsSection extends StatelessWidget {
   const DealsSection({super.key});
@@ -13,12 +12,12 @@ class DealsSection extends StatelessWidget {
         children: [
           Text(
             "Deals of the day",
-            style: TextStyles.heading2,
+            style: Theme.of(context).textTheme.headlineMedium,
           ),
           const Spacer(),
           Text(
             "See all",
-            style: TextStyles.body2,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ],
       ),

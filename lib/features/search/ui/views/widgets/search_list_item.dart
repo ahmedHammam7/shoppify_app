@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 
 class SearchListItem extends StatelessWidget {
   const SearchListItem({super.key, required this.text});
@@ -10,7 +9,7 @@ class SearchListItem extends StatelessWidget {
       children: [
         Text(
           text,
-          style: TextStyles.heading2,
+          style: Theme.of(context).textTheme.headlineMedium,
         ),
         const Spacer(),
         const Icon(Icons.chevron_right),

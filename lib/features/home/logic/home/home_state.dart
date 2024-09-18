@@ -10,4 +10,7 @@ class HomeState<T> with _$HomeState<T> {
   const factory HomeState.homeSuccess(HomeResponse homeResponse) = HomeSuccess;
 
   const factory HomeState.homeFailure(String error) = HomeFailure;
+
+  const factory HomeState.homeThemeDarked() = HomeThemeDarked;
+  const factory HomeState.homeThemeLighted() = HomeThemeLighted;
 }

@@ -32,10 +32,10 @@ class DealsContainer extends StatelessWidget {
           SmoothPageIndicator(
             controller: controller,
             count: 3,
-            effect: const ExpandingDotsEffect(
+            effect: ExpandingDotsEffect(
               dotHeight: 5,
               dotWidth: 20,
-              activeDotColor: AppColors.mainBlack,
+              activeDotColor: Theme.of(context).primaryColor,
               dotColor: AppColors.lighterGray,
             ),
           ),

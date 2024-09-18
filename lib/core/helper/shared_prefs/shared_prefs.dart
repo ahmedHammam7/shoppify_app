@@ -25,16 +25,16 @@ class SharedPrefHelper {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     debugPrint("SharedPrefHelper : setData with key : $key and value : $value");
     switch (value.runtimeType) {
-      case String:
+      case const (String):
         await sharedPreferences.setString(key, value);
         break;
-      case int:
+      case const (int):
         await sharedPreferences.setInt(key, value);
         break;
-      case bool:
+      case const (bool):
         await sharedPreferences.setBool(key, value);
         break;
-      case double:
+      case const (double):
         await sharedPreferences.setDouble(key, value);
         break;
       default:
@@ -80,6 +80,12 @@ class SharedPrefHelper {
   static Future getSecuredData(String key) async {
     const storage = FlutterSecureStorage();
     debugPrint('SharedPrefHelper : getSecuredData with key : $key');
-    return await storage.read(key: key) ?? '';
+    return await storage.read(key: key) ?? "";
+  }
+
+  static Future removeSecuredData(String key) async {
+    const storage = FlutterSecureStorage();
+    debugPrint('SharedPrefHelper : removeSecuredData with key : $key');
+    await storage.delete(key: key);
   }
 }

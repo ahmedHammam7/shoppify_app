@@ -2,11 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/home/data/models/home_response.dart';
-import 'package:shoppify_app/features/home/logic/cubit/home_cubit.dart';
+import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
 
 class RecomededListItem extends StatefulWidget {
   const RecomededListItem({
@@ -32,7 +32,9 @@ class _RecomededListItemState extends State<RecomededListItem> {
                 width: 160.w,
                 height: 170.h,
                 decoration: BoxDecoration(
-                  color: AppColors.textFieldBackground,
+                  color: isDarkMode
+                      ? AppColors.mainBlack
+                      : AppColors.textFieldBackground,
                   borderRadius: BorderRadius.all(
                     Radius.circular(24.r),
                   ),
@@ -44,37 +46,33 @@ class _RecomededListItemState extends State<RecomededListItem> {
                       )
                     : CachedNetworkImage(
                         placeholder: (context, url) =>
-                            const CircularProgressIndicator(
-                          color: AppColors.mainBlack,
+                            CircularProgressIndicator(
+                          color: Theme.of(context).primaryColor,
                         ),
                         imageUrl: widget.products.image,
                         height: 100.h,
                       )),
             Positioned(
-              top: 8.h,
-              right: 12.w,
-              child: CircleAvatar(
-                backgroundColor: AppColors.white,
-                radius: 17.r,
-                child: IconButton(
-                  onPressed: () async {
-                    await context.read<HomeCubit>().addFavourites(
-                        {"product_id": widget.products.id.toString()});
-                    widget.products.inFavorites = !widget.products.inFavorites;
-                    setState(() {});
-                  },
-                  icon: widget.products.inFavorites
-                      ? Icon(
-                          Icons.favorite,
-                          color: AppColors.mainBlack,
-                          size: 18.sp,
-                        )
-                      : Icon(
-                          Icons.favorite_border_outlined,
-                          color: AppColors.mainBlack,
-                          size: 18.sp,
-                        ),
-                ),
+              top: 5.h,
+              right: 5.w,
+              child: IconButton(
+                onPressed: () async {
+                  await context.read<HomeCubit>().addFavourites(
+                      {"product_id": widget.products.id.toString()});
+                  widget.products.inFavorites = !widget.products.inFavorites;
+                  setState(() {});
+                },
+                icon: widget.products.inFavorites
+                    ? Icon(
+                        Icons.favorite,
+                        color: AppColors.red,
+                        size: 18.sp,
+                      )
+                    : Icon(
+                        Icons.favorite_border_outlined,
+                        color: AppColors.red,
+                        size: 18.sp,
+                      ),
               ),
             ),
           ],
@@ -84,8 +82,9 @@ class _RecomededListItemState extends State<RecomededListItem> {
           widget.products.price == 0
               ? "\$" "209.99"
               : "${widget.products.price.toString()}\$",
-          style: TextStyles.heading3.copyWith(
-              color: AppColors.mainBlack, fontWeight: FontWeight.w800),
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+              color: Theme.of(context).primaryColor,
+              fontWeight: FontWeight.w800),
         ),
         SizedBox(
           width: 152.w,
@@ -94,18 +93,20 @@ class _RecomededListItemState extends State<RecomededListItem> {
             widget.products.name == ""
                 ? "SONY Premium Wireless Headphones"
                 : widget.products.name,
-            style: TextStyles.heading3.copyWith(
-              color: AppColors.mainBlack,
-              height: 1.h,
-            ),
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                  color: Theme.of(context).primaryColor,
+                  height: 1.h,
+                ),
           ),
         ),
         SizedBox(
           width: 152.w,
           height: 12.h,
           child: Text("Model: WH-1000XM4, Black",
-              style: TextStyles.caption2
-                  .copyWith(fontWeight: FontWeight.w400, height: 1.4.h)),
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(fontWeight: FontWeight.w400, height: 1.4.h)),
         ),
       ],
     );

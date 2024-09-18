@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 
 class HeaderLsitItem extends StatelessWidget {
   const HeaderLsitItem({super.key, required this.text});
@@ -10,14 +8,11 @@ class HeaderLsitItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
-          text,
-          style: TextStyles.heading3.copyWith(color: AppColors.mainBlack),
-        ),
+        Text(text, style: Theme.of(context).textTheme.headlineSmall),
         Container(
           width: 15.w,
           height: 3.h,
-          color: AppColors.mainBlack,
+          color: Theme.of(context).primaryColor,
         ),
       ],
     );

@@ -6,8 +6,8 @@ import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/home/data/models/home_response.dart';
-import 'package:shoppify_app/features/home/logic/cubit/home_cubit.dart';
-import 'package:shoppify_app/features/home/logic/cubit/home_state.dart';
+import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
+import 'package:shoppify_app/features/home/logic/home/home_state.dart';
 import 'package:shoppify_app/features/home/ui/widgets/deals_container.dart';
 import 'package:shoppify_app/features/home/ui/widgets/deals_section.dart';
 import 'package:shoppify_app/features/home/ui/widgets/header_list.dart';
@@ -56,9 +56,17 @@ Widget homeSuccess(HomeResponse homeResponse, context) {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.w),
-                  child: Text(
-                    "Hello Ahmed",
-                    style: TextStyles.heading1,
+                  child: Row(
+                    children: [
+                      Text("Hello Ahmed",
+                          style: Theme.of(context).textTheme.headlineLarge),
+                      const Spacer(),
+                      IconButton(
+                          onPressed: () {
+                            context.read<HomeCubit>().toggleTheme();
+                          },
+                          icon: const Icon(Icons.dark_mode_rounded))
+                    ],
                   ),
                 ),
                 verticalSpace(5),
@@ -72,8 +80,8 @@ Widget homeSuccess(HomeResponse homeResponse, context) {
                 verticalSpace(15),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10.w),
-                  child:
-                      Text("Recommended for you", style: TextStyles.heading2),
+                  child: Text("Recommended for you",
+                      style: Theme.of(context).textTheme.headlineMedium),
                 ),
               ],
             ),

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 
 class ProfileImage extends StatefulWidget {
@@ -21,7 +22,7 @@ class _ProfileImageState extends State<ProfileImage> {
       children: [
         CircleAvatar(
           radius: 100.r,
-          backgroundColor: AppColors.mainBlack,
+          backgroundColor: isDarkMode ? AppColors.white : AppColors.mainBlack,
           child: CircleAvatar(
             radius: 96.r,
             backgroundImage: AssetImage(
@@ -37,7 +38,8 @@ class _ProfileImageState extends State<ProfileImage> {
             },
             child: CircleAvatar(
               radius: 15.r,
-              backgroundColor: AppColors.mainBlack,
+              backgroundColor:
+                  isDarkMode ? AppColors.white : AppColors.mainBlack,
               child: CircleAvatar(
                 radius: 13.r,
                 backgroundColor: AppColors.white,

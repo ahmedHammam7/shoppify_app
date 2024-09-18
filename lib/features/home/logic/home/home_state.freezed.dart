@@ -22,6 +22,8 @@ mixin _$HomeState<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +32,8 @@ mixin _$HomeState<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +42,8 @@ mixin _$HomeState<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +53,8 @@ mixin _$HomeState<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +63,8 @@ mixin _$HomeState<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +73,8 @@ mixin _$HomeState<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +146,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
   }) {
     return initial();
   }
@@ -145,6 +159,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
   }) {
     return initial?.call();
   }
@@ -156,6 +172,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -171,6 +189,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
   }) {
     return initial(this);
   }
@@ -182,6 +202,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
   }) {
     return initial?.call(this);
   }
@@ -193,6 +215,8 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -251,6 +275,8 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
   }) {
     return homeLoading();
   }
@@ -262,6 +288,8 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
   }) {
     return homeLoading?.call();
   }
@@ -273,6 +301,8 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
     required TResult orElse(),
   }) {
     if (homeLoading != null) {
@@ -288,6 +318,8 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
   }) {
     return homeLoading(this);
   }
@@ -299,6 +331,8 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
   }) {
     return homeLoading?.call(this);
   }
@@ -310,6 +344,8 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
     required TResult orElse(),
   }) {
     if (homeLoading != null) {
@@ -397,6 +433,8 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
   }) {
     return homeSuccess(homeResponse);
   }
@@ -408,6 +446,8 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
   }) {
     return homeSuccess?.call(homeResponse);
   }
@@ -419,6 +459,8 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
     required TResult orElse(),
   }) {
     if (homeSuccess != null) {
@@ -434,6 +476,8 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
   }) {
     return homeSuccess(this);
   }
@@ -445,6 +489,8 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
   }) {
     return homeSuccess?.call(this);
   }
@@ -456,6 +502,8 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
     required TResult orElse(),
   }) {
     if (homeSuccess != null) {
@@ -551,6 +599,8 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     required TResult Function() homeLoading,
     required TResult Function(HomeResponse homeResponse) homeSuccess,
     required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
   }) {
     return homeFailure(error);
   }
@@ -562,6 +612,8 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult? Function()? homeLoading,
     TResult? Function(HomeResponse homeResponse)? homeSuccess,
     TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
   }) {
     return homeFailure?.call(error);
   }
@@ -573,6 +625,8 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult Function()? homeLoading,
     TResult Function(HomeResponse homeResponse)? homeSuccess,
     TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
     required TResult orElse(),
   }) {
     if (homeFailure != null) {
@@ -588,6 +642,8 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     required TResult Function(HomeLoading<T> value) homeLoading,
     required TResult Function(HomeSuccess<T> value) homeSuccess,
     required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
   }) {
     return homeFailure(this);
   }
@@ -599,6 +655,8 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult? Function(HomeLoading<T> value)? homeLoading,
     TResult? Function(HomeSuccess<T> value)? homeSuccess,
     TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
   }) {
     return homeFailure?.call(this);
   }
@@ -610,6 +668,8 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult Function(HomeLoading<T> value)? homeLoading,
     TResult Function(HomeSuccess<T> value)? homeSuccess,
     TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
     required TResult orElse(),
   }) {
     if (homeFailure != null) {
@@ -629,4 +689,263 @@ abstract class HomeFailure<T> implements HomeState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HomeFailureImplCopyWith<T, _$HomeFailureImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$HomeThemeDarkedImplCopyWith<T, $Res> {
+  factory _$$HomeThemeDarkedImplCopyWith(_$HomeThemeDarkedImpl<T> value,
+          $Res Function(_$HomeThemeDarkedImpl<T>) then) =
+      __$$HomeThemeDarkedImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$HomeThemeDarkedImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$HomeThemeDarkedImpl<T>>
+    implements _$$HomeThemeDarkedImplCopyWith<T, $Res> {
+  __$$HomeThemeDarkedImplCopyWithImpl(_$HomeThemeDarkedImpl<T> _value,
+      $Res Function(_$HomeThemeDarkedImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$HomeThemeDarkedImpl<T> implements HomeThemeDarked<T> {
+  const _$HomeThemeDarkedImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.homeThemeDarked()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$HomeThemeDarkedImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
+  }) {
+    return homeThemeDarked();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
+  }) {
+    return homeThemeDarked?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
+    required TResult orElse(),
+  }) {
+    if (homeThemeDarked != null) {
+      return homeThemeDarked();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+  }) {
+    return homeThemeDarked(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+  }) {
+    return homeThemeDarked?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    required TResult orElse(),
+  }) {
+    if (homeThemeDarked != null) {
+      return homeThemeDarked(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeThemeDarked<T> implements HomeState<T> {
+  const factory HomeThemeDarked() = _$HomeThemeDarkedImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$HomeThemeLightedImplCopyWith<T, $Res> {
+  factory _$$HomeThemeLightedImplCopyWith(_$HomeThemeLightedImpl<T> value,
+          $Res Function(_$HomeThemeLightedImpl<T>) then) =
+      __$$HomeThemeLightedImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$HomeThemeLightedImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$HomeThemeLightedImpl<T>>
+    implements _$$HomeThemeLightedImplCopyWith<T, $Res> {
+  __$$HomeThemeLightedImplCopyWithImpl(_$HomeThemeLightedImpl<T> _value,
+      $Res Function(_$HomeThemeLightedImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$HomeThemeLightedImpl<T> implements HomeThemeLighted<T> {
+  const _$HomeThemeLightedImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.homeThemeLighted()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeThemeLightedImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
+  }) {
+    return homeThemeLighted();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
+  }) {
+    return homeThemeLighted?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
+    required TResult orElse(),
+  }) {
+    if (homeThemeLighted != null) {
+      return homeThemeLighted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+  }) {
+    return homeThemeLighted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+  }) {
+    return homeThemeLighted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    required TResult orElse(),
+  }) {
+    if (homeThemeLighted != null) {
+      return homeThemeLighted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeThemeLighted<T> implements HomeState<T> {
+  const factory HomeThemeLighted() = _$HomeThemeLightedImpl<T>;
 }
