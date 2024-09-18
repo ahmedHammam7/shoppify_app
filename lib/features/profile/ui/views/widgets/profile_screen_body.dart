@@ -55,10 +55,9 @@ Widget profileSuccessWidget(ProfileResponse response, BuildContext context) {
       verticalSpace(30),
       AppButton(
           text: "Logout",
-          color: Colors.red,
           onTap: () async {
             await context.read<ProfileCubit>().logout(context);
-          }),
+          })
     ],
   );
 }

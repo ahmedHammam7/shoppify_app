@@ -2,11 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/home/data/models/home_response.dart';
-import 'package:shoppify_app/features/home/logic/cubit/home_cubit.dart';
+import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
 
 class DealsContainerItem extends StatefulWidget {
   const DealsContainerItem({
@@ -26,7 +26,7 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
       width: 330.w,
       height: MediaQuery.of(context).size.height * 0.25,
       decoration: BoxDecoration(
-        color: AppColors.textFieldBackground,
+        color: isDarkMode ? AppColors.mainBlack : AppColors.textFieldBackground,
         borderRadius: BorderRadius.all(
           Radius.circular(24.r),
         ),
@@ -35,9 +35,8 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
         children: [
           widget.products.image != ""
               ? CachedNetworkImage(
-                  placeholder: (context, url) =>
-                      const CircularProgressIndicator(
-                    color: AppColors.mainBlack,
+                  placeholder: (context, url) => CircularProgressIndicator(
+                    color: Theme.of(context).primaryColor,
                   ),
                   imageUrl: widget.products.image,
                   width: 170.w,
@@ -55,47 +54,42 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
               Padding(
                 padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.width * 0.35, top: 8.h),
-                child: CircleAvatar(
-                  backgroundColor: AppColors.white,
-                  radius: 17.r,
-                  child: IconButton(
-                    onPressed: () async {
-                      await context.read<HomeCubit>().addFavourites(
-                          {"product_id": widget.products.id.toString()});
-                      widget.products.inFavorites =
-                          !widget.products.inFavorites;
-                      setState(() {});
-                    },
-                    icon: widget.products.inFavorites
-                        ? Icon(
-                            Icons.favorite,
-                            color: AppColors.mainBlack,
-                            size: 18.sp,
-                          )
-                        : Icon(
-                            Icons.favorite_border_outlined,
-                            color: AppColors.mainBlack,
-                            size: 18.sp,
-                          ),
-                  ),
+                child: IconButton(
+                  onPressed: () async {
+                    await context.read<HomeCubit>().addFavourites(
+                        {"product_id": widget.products.id.toString()});
+                    widget.products.inFavorites = !widget.products.inFavorites;
+                    setState(() {});
+                  },
+                  icon: widget.products.inFavorites
+                      ? Icon(
+                          Icons.favorite,
+                          color: AppColors.red,
+                          size: 18.sp,
+                        )
+                      : Icon(
+                          Icons.favorite_border_outlined,
+                          color: AppColors.red,
+                          size: 18.sp,
+                        ),
                 ),
               ),
               Text(
                 "",
-                style: TextStyles.caption2,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
               verticalSpace(10),
               Row(
                 children: [
                   Text(
                     "${widget.products.price} \$",
-                    style: TextStyles.heading3.copyWith(
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                         color: AppColors.red, fontWeight: FontWeight.w800),
                   ),
                   horizontalSpace(10),
                   Text(
                     "${widget.products.oldPrice} \$",
-                    style: TextStyles.body2.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppColors.lighterGray,
                         decoration: TextDecoration.lineThrough),
                   ),
@@ -105,8 +99,8 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
                 width: MediaQuery.of(context).size.width * 0.4,
                 child: Text(
                   widget.products.name,
-                  style: TextStyles.heading3.copyWith(
-                      color: AppColors.mainBlack,
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: isDarkMode ? AppColors.white : AppColors.mainBlack,
                       overflow: TextOverflow.ellipsis),
                 ),
               ),
@@ -115,8 +109,10 @@ class _DealsContainerItemState extends State<DealsContainerItem> {
                 height: MediaQuery.of(context).size.height * 0.05,
                 child: Text(
                   widget.products.description,
-                  style: TextStyles.caption2
-                      .copyWith(overflow: TextOverflow.ellipsis),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleMedium
+                      ?.copyWith(overflow: TextOverflow.ellipsis),
                 ),
               ),
             ],

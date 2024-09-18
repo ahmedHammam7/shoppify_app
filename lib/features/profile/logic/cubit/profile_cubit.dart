@@ -23,8 +23,9 @@ class ProfileCubit extends Cubit<ProfileState> {
   Future<void> logout(BuildContext context) async {
     final result = await _profileRepo.logout();
     result.when(
-      success: (response) {
-        SharedPrefHelper.removeData(SharedPrefsConstant.token);
+      success: (response) async {
+        await SharedPrefHelper.removeSecuredData(SharedPrefsConstant.token);
+        // ignore: use_build_context_synchronously
         context.pushNamedAndRemoveUntil(Routes.loginScreen,
             predicate: (_) => false);
       },

@@ -2,9 +2,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/favourite/data/models/all_favourites_response.dart';
 import 'package:shoppify_app/features/favourite/logic/cubit/favourites_cubit.dart';
 
@@ -25,12 +25,12 @@ class FavouriteListItem extends StatelessWidget {
       direction: DismissDirection.endToStart,
       background: Container(
         decoration: BoxDecoration(
-          color: AppColors.mainBlack,
+          color: isDarkMode ? AppColors.white : AppColors.mainBlack,
           borderRadius: BorderRadius.circular(20.r),
         ),
-        child: const Icon(
+        child: Icon(
           Icons.delete,
-          color: AppColors.white,
+          color: isDarkMode ? AppColors.mainBlack : AppColors.white,
         ),
       ),
       child: Row(children: [
@@ -38,7 +38,9 @@ class FavouriteListItem extends StatelessWidget {
           width: 80.w,
           height: 88.h,
           decoration: BoxDecoration(
-            color: AppColors.textFieldBackground,
+            color: isDarkMode
+                ? AppColors.mainBlack
+                : AppColors.textFieldBackground,
             borderRadius: BorderRadius.all(
               Radius.circular(24.r),
             ),
@@ -49,9 +51,8 @@ class FavouriteListItem extends StatelessWidget {
                   height: 100.h,
                 )
               : CachedNetworkImage(
-                  placeholder: (context, url) =>
-                      const CircularProgressIndicator(
-                    color: AppColors.mainBlack,
+                  placeholder: (context, url) => CircularProgressIndicator(
+                    color: isDarkMode ? AppColors.white : AppColors.mainBlack,
                   ),
                   imageUrl: products.image,
                   height: 100.h,
@@ -63,18 +64,19 @@ class FavouriteListItem extends StatelessWidget {
           children: [
             Text(
               "${products.price} \$",
-              style: TextStyles.heading3.copyWith(
-                  color: AppColors.mainBlack, fontWeight: FontWeight.w800),
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                  color: isDarkMode ? AppColors.white : AppColors.mainBlack,
+                  fontWeight: FontWeight.w800),
             ),
             SizedBox(
               width: 152.w,
               height: 32.h,
               child: Text(
                 products.name,
-                style: TextStyles.heading3.copyWith(
-                  color: AppColors.mainBlack,
-                  height: 1.h,
-                ),
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: isDarkMode ? AppColors.white : AppColors.mainBlack,
+                      height: 1.h,
+                    ),
               ),
             ),
             SizedBox(
@@ -82,8 +84,10 @@ class FavouriteListItem extends StatelessWidget {
               height: 12.h,
               child: Text(
                 "Model: WH-1000XM4, Black",
-                style: TextStyles.caption2
-                    .copyWith(fontWeight: FontWeight.w400, height: 1.4.h),
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium
+                    ?.copyWith(fontWeight: FontWeight.w400, height: 1.4.h),
               ),
             ),
           ],

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 
 class CartAddOrSub extends StatefulWidget {
   const CartAddOrSub({super.key});
@@ -33,20 +32,24 @@ class _CartAddOrSubState extends State<CartAddOrSub> {
             },
             icon: Icon(
               Icons.remove,
-              size: 6.sp,
+              size: 9.sp,
+              color: AppColors.mainBlack,
             )),
       ),
       horizontalSpace(5.h),
       Text(
         count.toString(),
-        style: TextStyles.heading3.copyWith(fontWeight: FontWeight.w500),
+        style: Theme.of(context)
+            .textTheme
+            .headlineSmall
+            ?.copyWith(fontWeight: FontWeight.w500),
       ),
       horizontalSpace(5.h),
       Container(
         width: 24.w,
         height: 24.h,
         decoration: BoxDecoration(
-            color: AppColors.mainBlack,
+            color: AppColors.textFieldBackground,
             borderRadius: BorderRadius.circular(8.r)),
         child: IconButton(
           onPressed: () {
@@ -58,8 +61,8 @@ class _CartAddOrSubState extends State<CartAddOrSub> {
           },
           icon: Icon(
             Icons.add,
-            size: 6.sp,
-            color: AppColors.white,
+            size: 9.sp,
+            color: AppColors.mainBlack,
           ),
         ),
       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 
 class ShippingCart extends StatelessWidget {
   const ShippingCart({super.key, required this.text1, required this.text2});
@@ -13,16 +13,16 @@ class ShippingCart extends StatelessWidget {
       children: [
         Text(
           text1,
-          style: TextStyles.body2.copyWith(
-              color: AppColors.mainBlack,
+          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: isDarkMode ? AppColors.white : AppColors.mainBlack,
               fontWeight: FontWeight.w700,
               fontSize: 14.sp),
         ),
         const Spacer(),
         Text(
           text2,
-          style: TextStyles.body2.copyWith(
-              color: AppColors.mainBlack,
+          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: isDarkMode ? AppColors.white : AppColors.mainBlack,
               fontWeight: FontWeight.w700,
               fontSize: 14.sp),
         ),

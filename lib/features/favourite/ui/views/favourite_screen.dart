@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoppify_app/core/di/dependency_injection.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
+
 import 'package:shoppify_app/features/favourite/logic/cubit/favourites_cubit.dart';
 import 'package:shoppify_app/features/favourite/ui/views/widgets/favourite_screen_body.dart';
 
@@ -15,7 +15,10 @@ class FavouriteScreen extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'Favourite',
-          style: TextStyles.heading3.copyWith(fontWeight: FontWeight.w700),
+          style: Theme.of(context)
+              .textTheme
+              .headlineSmall
+              ?.copyWith(fontWeight: FontWeight.w700),
         ),
       ),
       body: BlocProvider(

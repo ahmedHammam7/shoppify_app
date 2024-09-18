@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoppify_app/features/favourite/data/repos/favourite_repos.dart';
 import 'package:shoppify_app/features/home/data/repos/home_repo.dart';
-import 'package:shoppify_app/features/home/logic/cubit/home_state.dart';
+import 'package:shoppify_app/features/home/logic/home/home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this._homeRepo, this._favouriteRepos)
@@ -46,5 +46,13 @@ class HomeCubit extends Cubit<HomeState> {
       },
       failure: (error) {},
     );
+  }
+
+  void toggleTheme() {
+    if (state is HomeThemeDarked) {
+      emit(const HomeState.homeThemeLighted());
+    } else {
+      emit(const HomeState.homeThemeDarked());
+    }
   }
 }
