@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 
 class AppTextField extends StatelessWidget {
   const AppTextField(
@@ -20,6 +19,10 @@ class AppTextField extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 30.h),
       child: TextFormField(
         controller: controller,
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              color: AppColors.mainBlack,
+            ),
+        cursorColor: AppColors.mainBlack,
         validator: (value) {
           return validator(value);
         },
@@ -27,7 +30,10 @@ class AppTextField extends StatelessWidget {
         decoration: InputDecoration(
           hoverColor: AppColors.mainBlack,
           labelText: labelText,
-          labelStyle: TextStyles.body3,
+          labelStyle: Theme.of(context)
+              .textTheme
+              .bodySmall
+              ?.copyWith(color: AppColors.mainBlack),
           fillColor: AppColors.textFieldBackground,
           filled: true,
           focusedBorder: OutlineInputBorder(

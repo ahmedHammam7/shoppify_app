@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
@@ -42,18 +43,19 @@ class PasswordValidations extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 15.w),
       child: Row(
         children: [
-          const CircleAvatar(
+          CircleAvatar(
             radius: 2.5,
-            backgroundColor: AppColors.gray,
+            backgroundColor: isDarkMode ? AppColors.white : AppColors.mainBlack,
           ),
           horizontalSpace(6),
           Text(
             text,
             style: TextStyles.heading3.copyWith(
               decoration: hasValidated ? TextDecoration.lineThrough : null,
-              decorationColor: Colors.green,
-              decorationThickness: 2,
-              color: hasValidated ? AppColors.gray : AppColors.mainBlack,
+              decorationColor:
+                  isDarkMode ? AppColors.white : AppColors.mainBlack,
+              decorationThickness: 3,
+              color: isDarkMode ? AppColors.white : AppColors.mainBlack,
             ),
           )
         ],

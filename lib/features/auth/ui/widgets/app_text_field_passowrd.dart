@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 
 class AppTextFieldPassword extends StatelessWidget {
   const AppTextFieldPassword(
@@ -21,7 +20,12 @@ class AppTextFieldPassword extends StatelessWidget {
       child: TextFormField(
         obscureText: obscureText,
         controller: controller,
+        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              color: AppColors.mainBlack,
+            ),
+        cursorColor: AppColors.mainBlack,
         decoration: InputDecoration(
+          suffixIconColor: AppColors.mainBlack,
           suffixIcon: IconButton(
             onPressed: iconPressed,
             icon: obscureText
@@ -30,7 +34,9 @@ class AppTextFieldPassword extends StatelessWidget {
           ),
           hoverColor: AppColors.mainBlack,
           labelText: "Password",
-          labelStyle: TextStyles.body3,
+          labelStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: AppColors.mainBlack,
+              ),
           fillColor: AppColors.textFieldBackground,
           filled: true,
           focusedBorder: OutlineInputBorder(

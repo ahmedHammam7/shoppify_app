@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoppify_app/core/helper/extension.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/routing/routes.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/auth/ui/register/widgets/register_form.dart';
 import 'package:shoppify_app/features/auth/ui/widgets/or_continue_with.dart';
 import 'package:shoppify_app/features/auth/ui/widgets/rich_text.dart';
@@ -28,11 +27,14 @@ class RegisterScreenBody extends StatelessWidget {
               ),
               Text(
                 "Welcome to Shoppify",
-                style: TextStyles.heading1,
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
               Text(
                 "Easy to Buy",
-                style: TextStyles.heading3.copyWith(height: 1.7.h),
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineSmall
+                    ?.copyWith(height: 1.7.h),
               ),
               const RegisterForm(),
               const OrContinueWith(),
