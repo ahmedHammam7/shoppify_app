@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/extension.dart';
 import 'package:shoppify_app/core/routing/routes.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/auth/logic/register/register_cubit.dart';
 import 'package:shoppify_app/features/auth/logic/register/register_state.dart';
 
@@ -23,9 +23,9 @@ class RegisterBlocListener extends StatelessWidget {
             loading: () {
               showDialog(
                 context: context,
-                builder: (context) => const Center(
+                builder: (context) => Center(
                   child: CircularProgressIndicator(
-                    color: AppColors.mainBlack,
+                    color: isDarkMode ? AppColors.white : AppColors.mainBlack,
                   ),
                 ),
               );
@@ -83,6 +83,7 @@ void setupErrorState(BuildContext context, String error) {
   showDialog(
     context: context,
     builder: (context) => AlertDialog(
+      backgroundColor: isDarkMode ? AppColors.white : AppColors.mainBlack,
       icon: Icon(
         Icons.error,
         color: Colors.red,
@@ -90,7 +91,8 @@ void setupErrorState(BuildContext context, String error) {
       ),
       content: Text(
         error,
-        style: TextStyles.heading3.copyWith(color: AppColors.mainBlack),
+        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+            color: isDarkMode ? AppColors.mainBlack : AppColors.white),
       ),
       actions: [
         TextButton(
@@ -99,7 +101,8 @@ void setupErrorState(BuildContext context, String error) {
           },
           child: Text(
             'Got it',
-            style: TextStyles.heading3.copyWith(color: AppColors.mainBlack),
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                color: isDarkMode ? AppColors.mainBlack : AppColors.white),
           ),
         ),
       ],

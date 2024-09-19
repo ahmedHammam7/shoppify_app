@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
 
 class AppRichText extends StatelessWidget {
   const AppRichText({
@@ -19,12 +19,12 @@ class AppRichText extends StatelessWidget {
       textAlign: TextAlign.center,
       text: TextSpan(
         text: text1,
-        style:
-            TextStyles.termsAndCondition.copyWith(color: AppColors.mainBlack),
+        style: Theme.of(context).textTheme.titleLarge?.copyWith(
+            color: isDarkMode ? AppColors.white : AppColors.mainBlack),
         children: [
           TextSpan(
             text: text2,
-            style: TextStyles.termsAndCondition,
+            style: Theme.of(context).textTheme.titleLarge,
             recognizer: TapGestureRecognizer()..onTap = onTap,
           ),
         ],

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/extension.dart';
 import 'package:shoppify_app/core/routing/routes.dart';
-import 'package:shoppify_app/core/theming/text_styles.dart';
+import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/features/auth/ui/login/widgets/login_form.dart';
 import 'package:shoppify_app/features/auth/ui/widgets/or_continue_with.dart';
 import 'package:shoppify_app/features/auth/ui/widgets/rich_text.dart';
@@ -27,11 +28,15 @@ class LoginScreenBody extends StatelessWidget {
               ),
               Text(
                 "Welcome back",
-                style: TextStyles.heading1,
+                style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                      color: isDarkMode ? AppColors.white : AppColors.mainBlack,
+                    ),
               ),
               Text(
                 "Easy to Buy",
-                style: TextStyles.heading3.copyWith(height: 1.7.h),
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    color: isDarkMode ? AppColors.white : AppColors.mainBlack,
+                    height: 1.5.h),
               ),
               const LoginForm(),
               const OrContinueWith(),
