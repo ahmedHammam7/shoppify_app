@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoppify_app/core/di/dependency_injection.dart';
 import 'package:shoppify_app/core/routing/routes.dart';
+
 import 'package:shoppify_app/features/auth/logic/register/register_cubit.dart';
 import 'package:shoppify_app/features/auth/ui/login/views/login_screen.dart';
 import 'package:shoppify_app/features/auth/ui/register/view/register_screen.dart';

@@ -24,6 +24,9 @@ mixin _$HomeState<T> {
     required TResult Function(String error) homeFailure,
     required TResult Function() homeThemeDarked,
     required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +37,9 @@ mixin _$HomeState<T> {
     TResult? Function(String error)? homeFailure,
     TResult? Function()? homeThemeDarked,
     TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +50,9 @@ mixin _$HomeState<T> {
     TResult Function(String error)? homeFailure,
     TResult Function()? homeThemeDarked,
     TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +64,9 @@ mixin _$HomeState<T> {
     required TResult Function(HomeFailure<T> value) homeFailure,
     required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
     required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +77,9 @@ mixin _$HomeState<T> {
     TResult? Function(HomeFailure<T> value)? homeFailure,
     TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +90,9 @@ mixin _$HomeState<T> {
     TResult Function(HomeFailure<T> value)? homeFailure,
     TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -148,6 +166,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(String error) homeFailure,
     required TResult Function() homeThemeDarked,
     required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
   }) {
     return initial();
   }
@@ -161,6 +182,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(String error)? homeFailure,
     TResult? Function()? homeThemeDarked,
     TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
   }) {
     return initial?.call();
   }
@@ -174,6 +198,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(String error)? homeFailure,
     TResult Function()? homeThemeDarked,
     TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -191,6 +218,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(HomeFailure<T> value) homeFailure,
     required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
     required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
   }) {
     return initial(this);
   }
@@ -204,6 +234,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(HomeFailure<T> value)? homeFailure,
     TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
   }) {
     return initial?.call(this);
   }
@@ -217,6 +250,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(HomeFailure<T> value)? homeFailure,
     TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -277,6 +313,9 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     required TResult Function(String error) homeFailure,
     required TResult Function() homeThemeDarked,
     required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
   }) {
     return homeLoading();
   }
@@ -290,6 +329,9 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult? Function(String error)? homeFailure,
     TResult? Function()? homeThemeDarked,
     TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
   }) {
     return homeLoading?.call();
   }
@@ -303,6 +345,9 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult Function(String error)? homeFailure,
     TResult Function()? homeThemeDarked,
     TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeLoading != null) {
@@ -320,6 +365,9 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     required TResult Function(HomeFailure<T> value) homeFailure,
     required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
     required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
   }) {
     return homeLoading(this);
   }
@@ -333,6 +381,9 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult? Function(HomeFailure<T> value)? homeFailure,
     TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
   }) {
     return homeLoading?.call(this);
   }
@@ -346,6 +397,9 @@ class _$HomeLoadingImpl<T> implements HomeLoading<T> {
     TResult Function(HomeFailure<T> value)? homeFailure,
     TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeLoading != null) {
@@ -435,6 +489,9 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     required TResult Function(String error) homeFailure,
     required TResult Function() homeThemeDarked,
     required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
   }) {
     return homeSuccess(homeResponse);
   }
@@ -448,6 +505,9 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult? Function(String error)? homeFailure,
     TResult? Function()? homeThemeDarked,
     TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
   }) {
     return homeSuccess?.call(homeResponse);
   }
@@ -461,6 +521,9 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult Function(String error)? homeFailure,
     TResult Function()? homeThemeDarked,
     TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeSuccess != null) {
@@ -478,6 +541,9 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     required TResult Function(HomeFailure<T> value) homeFailure,
     required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
     required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
   }) {
     return homeSuccess(this);
   }
@@ -491,6 +557,9 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult? Function(HomeFailure<T> value)? homeFailure,
     TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
   }) {
     return homeSuccess?.call(this);
   }
@@ -504,6 +573,9 @@ class _$HomeSuccessImpl<T> implements HomeSuccess<T> {
     TResult Function(HomeFailure<T> value)? homeFailure,
     TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeSuccess != null) {
@@ -601,6 +673,9 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     required TResult Function(String error) homeFailure,
     required TResult Function() homeThemeDarked,
     required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
   }) {
     return homeFailure(error);
   }
@@ -614,6 +689,9 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult? Function(String error)? homeFailure,
     TResult? Function()? homeThemeDarked,
     TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
   }) {
     return homeFailure?.call(error);
   }
@@ -627,6 +705,9 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult Function(String error)? homeFailure,
     TResult Function()? homeThemeDarked,
     TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeFailure != null) {
@@ -644,6 +725,9 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     required TResult Function(HomeFailure<T> value) homeFailure,
     required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
     required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
   }) {
     return homeFailure(this);
   }
@@ -657,6 +741,9 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult? Function(HomeFailure<T> value)? homeFailure,
     TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
   }) {
     return homeFailure?.call(this);
   }
@@ -670,6 +757,9 @@ class _$HomeFailureImpl<T> implements HomeFailure<T> {
     TResult Function(HomeFailure<T> value)? homeFailure,
     TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeFailure != null) {
@@ -738,6 +828,9 @@ class _$HomeThemeDarkedImpl<T> implements HomeThemeDarked<T> {
     required TResult Function(String error) homeFailure,
     required TResult Function() homeThemeDarked,
     required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
   }) {
     return homeThemeDarked();
   }
@@ -751,6 +844,9 @@ class _$HomeThemeDarkedImpl<T> implements HomeThemeDarked<T> {
     TResult? Function(String error)? homeFailure,
     TResult? Function()? homeThemeDarked,
     TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
   }) {
     return homeThemeDarked?.call();
   }
@@ -764,6 +860,9 @@ class _$HomeThemeDarkedImpl<T> implements HomeThemeDarked<T> {
     TResult Function(String error)? homeFailure,
     TResult Function()? homeThemeDarked,
     TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeThemeDarked != null) {
@@ -781,6 +880,9 @@ class _$HomeThemeDarkedImpl<T> implements HomeThemeDarked<T> {
     required TResult Function(HomeFailure<T> value) homeFailure,
     required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
     required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
   }) {
     return homeThemeDarked(this);
   }
@@ -794,6 +896,9 @@ class _$HomeThemeDarkedImpl<T> implements HomeThemeDarked<T> {
     TResult? Function(HomeFailure<T> value)? homeFailure,
     TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
   }) {
     return homeThemeDarked?.call(this);
   }
@@ -807,6 +912,9 @@ class _$HomeThemeDarkedImpl<T> implements HomeThemeDarked<T> {
     TResult Function(HomeFailure<T> value)? homeFailure,
     TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeThemeDarked != null) {
@@ -868,6 +976,9 @@ class _$HomeThemeLightedImpl<T> implements HomeThemeLighted<T> {
     required TResult Function(String error) homeFailure,
     required TResult Function() homeThemeDarked,
     required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
   }) {
     return homeThemeLighted();
   }
@@ -881,6 +992,9 @@ class _$HomeThemeLightedImpl<T> implements HomeThemeLighted<T> {
     TResult? Function(String error)? homeFailure,
     TResult? Function()? homeThemeDarked,
     TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
   }) {
     return homeThemeLighted?.call();
   }
@@ -894,6 +1008,9 @@ class _$HomeThemeLightedImpl<T> implements HomeThemeLighted<T> {
     TResult Function(String error)? homeFailure,
     TResult Function()? homeThemeDarked,
     TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeThemeLighted != null) {
@@ -911,6 +1028,9 @@ class _$HomeThemeLightedImpl<T> implements HomeThemeLighted<T> {
     required TResult Function(HomeFailure<T> value) homeFailure,
     required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
     required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
   }) {
     return homeThemeLighted(this);
   }
@@ -924,6 +1044,9 @@ class _$HomeThemeLightedImpl<T> implements HomeThemeLighted<T> {
     TResult? Function(HomeFailure<T> value)? homeFailure,
     TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
   }) {
     return homeThemeLighted?.call(this);
   }
@@ -937,6 +1060,9 @@ class _$HomeThemeLightedImpl<T> implements HomeThemeLighted<T> {
     TResult Function(HomeFailure<T> value)? homeFailure,
     TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
     TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
     required TResult orElse(),
   }) {
     if (homeThemeLighted != null) {
@@ -948,4 +1074,519 @@ class _$HomeThemeLightedImpl<T> implements HomeThemeLighted<T> {
 
 abstract class HomeThemeLighted<T> implements HomeState<T> {
   const factory HomeThemeLighted() = _$HomeThemeLightedImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$ProfileLoadingImplCopyWith<T, $Res> {
+  factory _$$ProfileLoadingImplCopyWith(_$ProfileLoadingImpl<T> value,
+          $Res Function(_$ProfileLoadingImpl<T>) then) =
+      __$$ProfileLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$ProfileLoadingImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$ProfileLoadingImpl<T>>
+    implements _$$ProfileLoadingImplCopyWith<T, $Res> {
+  __$$ProfileLoadingImplCopyWithImpl(_$ProfileLoadingImpl<T> _value,
+      $Res Function(_$ProfileLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ProfileLoadingImpl<T> implements ProfileLoading<T> {
+  const _$ProfileLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.profileLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ProfileLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
+  }) {
+    return profileLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
+  }) {
+    return profileLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
+    required TResult orElse(),
+  }) {
+    if (profileLoading != null) {
+      return profileLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
+  }) {
+    return profileLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
+  }) {
+    return profileLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
+    required TResult orElse(),
+  }) {
+    if (profileLoading != null) {
+      return profileLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileLoading<T> implements HomeState<T> {
+  const factory ProfileLoading() = _$ProfileLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$ProfileSuccessImplCopyWith<T, $Res> {
+  factory _$$ProfileSuccessImplCopyWith(_$ProfileSuccessImpl<T> value,
+          $Res Function(_$ProfileSuccessImpl<T>) then) =
+      __$$ProfileSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({ProfileResponse profileResponse});
+}
+
+/// @nodoc
+class __$$ProfileSuccessImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$ProfileSuccessImpl<T>>
+    implements _$$ProfileSuccessImplCopyWith<T, $Res> {
+  __$$ProfileSuccessImplCopyWithImpl(_$ProfileSuccessImpl<T> _value,
+      $Res Function(_$ProfileSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? profileResponse = null,
+  }) {
+    return _then(_$ProfileSuccessImpl<T>(
+      null == profileResponse
+          ? _value.profileResponse
+          : profileResponse // ignore: cast_nullable_to_non_nullable
+              as ProfileResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileSuccessImpl<T> implements ProfileSuccess<T> {
+  const _$ProfileSuccessImpl(this.profileResponse);
+
+  @override
+  final ProfileResponse profileResponse;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.profileSuccess(profileResponse: $profileResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileSuccessImpl<T> &&
+            (identical(other.profileResponse, profileResponse) ||
+                other.profileResponse == profileResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, profileResponse);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileSuccessImplCopyWith<T, _$ProfileSuccessImpl<T>> get copyWith =>
+      __$$ProfileSuccessImplCopyWithImpl<T, _$ProfileSuccessImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
+  }) {
+    return profileSuccess(profileResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
+  }) {
+    return profileSuccess?.call(profileResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
+    required TResult orElse(),
+  }) {
+    if (profileSuccess != null) {
+      return profileSuccess(profileResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
+  }) {
+    return profileSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
+  }) {
+    return profileSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
+    required TResult orElse(),
+  }) {
+    if (profileSuccess != null) {
+      return profileSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileSuccess<T> implements HomeState<T> {
+  const factory ProfileSuccess(final ProfileResponse profileResponse) =
+      _$ProfileSuccessImpl<T>;
+
+  ProfileResponse get profileResponse;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ProfileSuccessImplCopyWith<T, _$ProfileSuccessImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileFailureImplCopyWith<T, $Res> {
+  factory _$$ProfileFailureImplCopyWith(_$ProfileFailureImpl<T> value,
+          $Res Function(_$ProfileFailureImpl<T>) then) =
+      __$$ProfileFailureImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$ProfileFailureImplCopyWithImpl<T, $Res>
+    extends _$HomeStateCopyWithImpl<T, $Res, _$ProfileFailureImpl<T>>
+    implements _$$ProfileFailureImplCopyWith<T, $Res> {
+  __$$ProfileFailureImplCopyWithImpl(_$ProfileFailureImpl<T> _value,
+      $Res Function(_$ProfileFailureImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ProfileFailureImpl<T>(
+      null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileFailureImpl<T> implements ProfileFailure<T> {
+  const _$ProfileFailureImpl(this.error);
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'HomeState<$T>.profileFailure(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileFailureImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileFailureImplCopyWith<T, _$ProfileFailureImpl<T>> get copyWith =>
+      __$$ProfileFailureImplCopyWithImpl<T, _$ProfileFailureImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() homeLoading,
+    required TResult Function(HomeResponse homeResponse) homeSuccess,
+    required TResult Function(String error) homeFailure,
+    required TResult Function() homeThemeDarked,
+    required TResult Function() homeThemeLighted,
+    required TResult Function() profileLoading,
+    required TResult Function(ProfileResponse profileResponse) profileSuccess,
+    required TResult Function(String error) profileFailure,
+  }) {
+    return profileFailure(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? homeLoading,
+    TResult? Function(HomeResponse homeResponse)? homeSuccess,
+    TResult? Function(String error)? homeFailure,
+    TResult? Function()? homeThemeDarked,
+    TResult? Function()? homeThemeLighted,
+    TResult? Function()? profileLoading,
+    TResult? Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult? Function(String error)? profileFailure,
+  }) {
+    return profileFailure?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? homeLoading,
+    TResult Function(HomeResponse homeResponse)? homeSuccess,
+    TResult Function(String error)? homeFailure,
+    TResult Function()? homeThemeDarked,
+    TResult Function()? homeThemeLighted,
+    TResult Function()? profileLoading,
+    TResult Function(ProfileResponse profileResponse)? profileSuccess,
+    TResult Function(String error)? profileFailure,
+    required TResult orElse(),
+  }) {
+    if (profileFailure != null) {
+      return profileFailure(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(HomeLoading<T> value) homeLoading,
+    required TResult Function(HomeSuccess<T> value) homeSuccess,
+    required TResult Function(HomeFailure<T> value) homeFailure,
+    required TResult Function(HomeThemeDarked<T> value) homeThemeDarked,
+    required TResult Function(HomeThemeLighted<T> value) homeThemeLighted,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileFailure<T> value) profileFailure,
+  }) {
+    return profileFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(HomeLoading<T> value)? homeLoading,
+    TResult? Function(HomeSuccess<T> value)? homeSuccess,
+    TResult? Function(HomeFailure<T> value)? homeFailure,
+    TResult? Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult? Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileFailure<T> value)? profileFailure,
+  }) {
+    return profileFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(HomeLoading<T> value)? homeLoading,
+    TResult Function(HomeSuccess<T> value)? homeSuccess,
+    TResult Function(HomeFailure<T> value)? homeFailure,
+    TResult Function(HomeThemeDarked<T> value)? homeThemeDarked,
+    TResult Function(HomeThemeLighted<T> value)? homeThemeLighted,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileFailure<T> value)? profileFailure,
+    required TResult orElse(),
+  }) {
+    if (profileFailure != null) {
+      return profileFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileFailure<T> implements HomeState<T> {
+  const factory ProfileFailure(final String error) = _$ProfileFailureImpl<T>;
+
+  String get error;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ProfileFailureImplCopyWith<T, _$ProfileFailureImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

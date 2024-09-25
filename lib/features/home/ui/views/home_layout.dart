@@ -11,20 +11,15 @@ import 'package:shoppify_app/features/profile/ui/views/profile_screen.dart';
 import 'package:shoppify_app/features/search/ui/views/search_screen.dart';
 
 class HomeLayout extends StatefulWidget {
-  const HomeLayout({super.key});
+  const HomeLayout({
+    super.key,
+  });
 
   @override
   State<HomeLayout> createState() => _HomeLayoutState();
 }
 
 int currentIndex = 0;
-List<Widget> screens = const [
-  HomeScreen(),
-  SearchScreen(),
-  FavouriteScreen(),
-  CartScreen(),
-  ProfileScreen(),
-];
 
 void changeIndex(int index) {
   currentIndex = index;
@@ -33,6 +28,13 @@ void changeIndex(int index) {
 class _HomeLayoutState extends State<HomeLayout> {
   @override
   Widget build(BuildContext context) {
+    List<Widget> screens = [
+      const HomeScreen(),
+      const SearchScreen(),
+      const FavouriteScreen(),
+      const CartScreen(),
+      const ProfileScreen(),
+    ];
     return Scaffold(
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(

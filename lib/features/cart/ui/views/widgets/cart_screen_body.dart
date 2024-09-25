@@ -10,10 +10,14 @@ import 'package:shoppify_app/features/cart/ui/views/widgets/cart_list.dart';
 import 'package:shoppify_app/features/cart/ui/views/widgets/cart_loading.dart';
 import 'package:shoppify_app/features/cart/ui/views/widgets/no_cart.dart';
 import 'package:shoppify_app/features/cart/ui/views/widgets/shipping_cart.dart';
+import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
+import 'package:shoppify_app/features/profile/data/models/profile_response.dart';
 import 'package:shoppify_app/features/search/ui/views/widgets/spacer_line.dart';
 
 class CartScreenBody extends StatelessWidget {
-  const CartScreenBody({super.key});
+  const CartScreenBody({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +36,8 @@ class CartScreenBody extends StatelessWidget {
               widget = const CartLoadingWidget();
             },
             carSuccess: (getCartsResponse) {
-              widget = cartSuccessWidget(getCartsResponse);
+              widget = cartSuccessWidget(getCartsResponse, context,
+                  context.read<HomeCubit>().profileData!);
             },
             cartFailure: (error) {
               widget = const NoCart();
@@ -44,7 +49,8 @@ class CartScreenBody extends StatelessWidget {
   }
 }
 
-Widget cartSuccessWidget(GetCartsResponse getCartsResponse) {
+Widget cartSuccessWidget(
+    GetCartsResponse getCartsResponse, context, ProfileData profileData) {
   return SafeArea(
     child: SingleChildScrollView(
       child: Padding(
@@ -59,7 +65,15 @@ Widget cartSuccessWidget(GetCartsResponse getCartsResponse) {
             const ShippingCart(text1: "Shipping", text2: "Free"),
             ShippingCart(
                 text1: "Total", text2: "${getCartsResponse.data.total}\$"),
-            AppButton(text: "Checkout", onTap: () {}),
+            AppButton(
+                text: "Checkout",
+                onTap: () async {
+                  await BlocProvider.of<CartCubit>(context).makePayment(
+                      getCartsResponse.data.total,
+                      "USD",
+                      profileData.email,
+                      profileData.name);
+                }),
           ],
         ),
       ),

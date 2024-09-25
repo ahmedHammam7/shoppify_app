@@ -28,11 +28,12 @@ class LoginBlocLiscener extends StatelessWidget {
                 ),
               ),
             ),
-            success: (loginResponse) {
+            success: (loginResponse) async {
               context.pop();
-              context.pushNamedAndRemoveUntil(
+              await context.pushNamedAndRemoveUntil(
                 Routes.homeLayout,
                 predicate: (route) => false,
+                arguments: loginResponse.data,
               );
             },
             error: (message) {

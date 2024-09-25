@@ -18,9 +18,10 @@ class ShoppifyApp extends StatelessWidget {
         designSize: const Size(375, 812),
         minTextAdapt: true,
         builder: (context, child) => BlocProvider(
-            create: (context) => HomeCubit(getIt(), getIt())
+            create: (context) => HomeCubit(getIt(), getIt(), getIt())
               ..getHome()
-              ..getFavourites(),
+              ..getFavourites()
+              ..getProfile(),
             child: BlocBuilder<HomeCubit, HomeState>(
               builder: (context, state) {
                 state.whenOrNull(
