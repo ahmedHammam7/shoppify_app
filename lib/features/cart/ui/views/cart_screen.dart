@@ -5,7 +5,9 @@ import 'package:shoppify_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:shoppify_app/features/cart/ui/views/widgets/cart_screen_body.dart';
 
 class CartScreen extends StatelessWidget {
-  const CartScreen({super.key});
+  const CartScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class CartScreen extends StatelessWidget {
         ),
       ),
       body: BlocProvider(
-        create: (context) => CartCubit(getIt())..getCart(),
+        create: (context) => CartCubit(getIt(), getIt())..getCart(),
         child: const CartScreenBody(),
       ),
     );

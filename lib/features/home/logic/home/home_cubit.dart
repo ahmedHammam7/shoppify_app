@@ -2,12 +2,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoppify_app/features/favourite/data/repos/favourite_repos.dart';
 import 'package:shoppify_app/features/home/data/repos/home_repo.dart';
 import 'package:shoppify_app/features/home/logic/home/home_state.dart';
+import 'package:shoppify_app/features/profile/data/models/profile_response.dart';
+import 'package:shoppify_app/features/profile/data/repo/profile_repo.dart';
 
 class HomeCubit extends Cubit<HomeState> {
-  HomeCubit(this._homeRepo, this._favouriteRepos)
+  HomeCubit(this._homeRepo, this._favouriteRepos, this._profileRepo)
       : super(const HomeState.initial());
   final HomeRepo _homeRepo;
   final FavouriteRepos _favouriteRepos;
+  final ProfileRepo _profileRepo;
 
   Future<void> getHome() async {
     final response = await _homeRepo.getHomeData();
@@ -45,6 +48,19 @@ class HomeCubit extends Cubit<HomeState> {
         favouriteCount = favouriteResponse.data.data.length;
       },
       failure: (error) {},
+    );
+  }
+
+  ProfileData? profileData;
+  Future<void> getProfile() async {
+    emit(const HomeState.profileLoading());
+    final result = await _profileRepo.getProfile();
+    result.when(
+      success: (response) {
+        profileData = response.data;
+        emit(HomeState.profileSuccess(response));
+      },
+      failure: (error) => emit(HomeState.profileFailure(error)),
     );
   }
 

@@ -25,6 +25,9 @@ mixin _$CartState<T> {
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +39,9 @@ mixin _$CartState<T> {
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +53,9 @@ mixin _$CartState<T> {
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +68,9 @@ mixin _$CartState<T> {
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +82,9 @@ mixin _$CartState<T> {
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +96,9 @@ mixin _$CartState<T> {
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -155,6 +173,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
   }) {
     return initial();
   }
@@ -169,6 +190,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
   }) {
     return initial?.call();
   }
@@ -183,6 +207,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -201,6 +228,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
   }) {
     return initial(this);
   }
@@ -215,6 +245,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
   }) {
     return initial?.call(this);
   }
@@ -229,6 +262,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -290,6 +326,9 @@ class _$CartLoadingImpl<T> implements CartLoading<T> {
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
   }) {
     return cartLoading();
   }
@@ -304,6 +343,9 @@ class _$CartLoadingImpl<T> implements CartLoading<T> {
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
   }) {
     return cartLoading?.call();
   }
@@ -318,6 +360,9 @@ class _$CartLoadingImpl<T> implements CartLoading<T> {
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
     required TResult orElse(),
   }) {
     if (cartLoading != null) {
@@ -336,6 +381,9 @@ class _$CartLoadingImpl<T> implements CartLoading<T> {
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
   }) {
     return cartLoading(this);
   }
@@ -350,6 +398,9 @@ class _$CartLoadingImpl<T> implements CartLoading<T> {
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
   }) {
     return cartLoading?.call(this);
   }
@@ -364,6 +415,9 @@ class _$CartLoadingImpl<T> implements CartLoading<T> {
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
     required TResult orElse(),
   }) {
     if (cartLoading != null) {
@@ -454,6 +508,9 @@ class _$CartSuccessImpl<T> implements CartSuccess<T> {
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
   }) {
     return carSuccess(getCartsResponse);
   }
@@ -468,6 +525,9 @@ class _$CartSuccessImpl<T> implements CartSuccess<T> {
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
   }) {
     return carSuccess?.call(getCartsResponse);
   }
@@ -482,6 +542,9 @@ class _$CartSuccessImpl<T> implements CartSuccess<T> {
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
     required TResult orElse(),
   }) {
     if (carSuccess != null) {
@@ -500,6 +563,9 @@ class _$CartSuccessImpl<T> implements CartSuccess<T> {
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
   }) {
     return carSuccess(this);
   }
@@ -514,6 +580,9 @@ class _$CartSuccessImpl<T> implements CartSuccess<T> {
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
   }) {
     return carSuccess?.call(this);
   }
@@ -528,6 +597,9 @@ class _$CartSuccessImpl<T> implements CartSuccess<T> {
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
     required TResult orElse(),
   }) {
     if (carSuccess != null) {
@@ -626,6 +698,9 @@ class _$CartFailureImpl<T> implements CartFailure<T> {
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
   }) {
     return cartFailure(message);
   }
@@ -640,6 +715,9 @@ class _$CartFailureImpl<T> implements CartFailure<T> {
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
   }) {
     return cartFailure?.call(message);
   }
@@ -654,6 +732,9 @@ class _$CartFailureImpl<T> implements CartFailure<T> {
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
     required TResult orElse(),
   }) {
     if (cartFailure != null) {
@@ -672,6 +753,9 @@ class _$CartFailureImpl<T> implements CartFailure<T> {
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
   }) {
     return cartFailure(this);
   }
@@ -686,6 +770,9 @@ class _$CartFailureImpl<T> implements CartFailure<T> {
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
   }) {
     return cartFailure?.call(this);
   }
@@ -700,6 +787,9 @@ class _$CartFailureImpl<T> implements CartFailure<T> {
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
     required TResult orElse(),
   }) {
     if (cartFailure != null) {
@@ -769,6 +859,9 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
   }) {
     return addCartLoading();
   }
@@ -783,6 +876,9 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
   }) {
     return addCartLoading?.call();
   }
@@ -797,6 +893,9 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
     required TResult orElse(),
   }) {
     if (addCartLoading != null) {
@@ -815,6 +914,9 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
   }) {
     return addCartLoading(this);
   }
@@ -829,6 +931,9 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
   }) {
     return addCartLoading?.call(this);
   }
@@ -843,6 +948,9 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
     required TResult orElse(),
   }) {
     if (addCartLoading != null) {
@@ -933,6 +1041,9 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
   }) {
     return addCartSuccess(addCartResponse);
   }
@@ -947,6 +1058,9 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
   }) {
     return addCartSuccess?.call(addCartResponse);
   }
@@ -961,6 +1075,9 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
     required TResult orElse(),
   }) {
     if (addCartSuccess != null) {
@@ -979,6 +1096,9 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
   }) {
     return addCartSuccess(this);
   }
@@ -993,6 +1113,9 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
   }) {
     return addCartSuccess?.call(this);
   }
@@ -1007,6 +1130,9 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
     required TResult orElse(),
   }) {
     if (addCartSuccess != null) {
@@ -1105,6 +1231,9 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
   }) {
     return addCartFailure(message);
   }
@@ -1119,6 +1248,9 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
   }) {
     return addCartFailure?.call(message);
   }
@@ -1133,6 +1265,9 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
     required TResult orElse(),
   }) {
     if (addCartFailure != null) {
@@ -1151,6 +1286,9 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
   }) {
     return addCartFailure(this);
   }
@@ -1165,6 +1303,9 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
   }) {
     return addCartFailure?.call(this);
   }
@@ -1179,6 +1320,9 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
     required TResult orElse(),
   }) {
     if (addCartFailure != null) {
@@ -1197,5 +1341,500 @@ abstract class AddCartFailure<T> implements CartState<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddCartFailureImplCopyWith<T, _$AddCartFailureImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PaymentLoadingImplCopyWith<T, $Res> {
+  factory _$$PaymentLoadingImplCopyWith(_$PaymentLoadingImpl<T> value,
+          $Res Function(_$PaymentLoadingImpl<T>) then) =
+      __$$PaymentLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$PaymentLoadingImplCopyWithImpl<T, $Res>
+    extends _$CartStateCopyWithImpl<T, $Res, _$PaymentLoadingImpl<T>>
+    implements _$$PaymentLoadingImplCopyWith<T, $Res> {
+  __$$PaymentLoadingImplCopyWithImpl(_$PaymentLoadingImpl<T> _value,
+      $Res Function(_$PaymentLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$PaymentLoadingImpl<T> implements PaymentLoading<T> {
+  const _$PaymentLoadingImpl();
+
+  @override
+  String toString() {
+    return 'CartState<$T>.paymentLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$PaymentLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() cartLoading,
+    required TResult Function(GetCartsResponse getCartsResponse) carSuccess,
+    required TResult Function(String message) cartFailure,
+    required TResult Function() addCartLoading,
+    required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
+    required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
+  }) {
+    return paymentLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? cartLoading,
+    TResult? Function(GetCartsResponse getCartsResponse)? carSuccess,
+    TResult? Function(String message)? cartFailure,
+    TResult? Function()? addCartLoading,
+    TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
+    TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
+  }) {
+    return paymentLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? cartLoading,
+    TResult Function(GetCartsResponse getCartsResponse)? carSuccess,
+    TResult Function(String message)? cartFailure,
+    TResult Function()? addCartLoading,
+    TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
+    TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
+    required TResult orElse(),
+  }) {
+    if (paymentLoading != null) {
+      return paymentLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(CartLoading<T> value) cartLoading,
+    required TResult Function(CartSuccess<T> value) carSuccess,
+    required TResult Function(CartFailure<T> value) cartFailure,
+    required TResult Function(AddCartLoading<T> value) addCartLoading,
+    required TResult Function(AddCartSuccess<T> value) addCartSuccess,
+    required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
+  }) {
+    return paymentLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(CartLoading<T> value)? cartLoading,
+    TResult? Function(CartSuccess<T> value)? carSuccess,
+    TResult? Function(CartFailure<T> value)? cartFailure,
+    TResult? Function(AddCartLoading<T> value)? addCartLoading,
+    TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
+    TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
+  }) {
+    return paymentLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(CartLoading<T> value)? cartLoading,
+    TResult Function(CartSuccess<T> value)? carSuccess,
+    TResult Function(CartFailure<T> value)? cartFailure,
+    TResult Function(AddCartLoading<T> value)? addCartLoading,
+    TResult Function(AddCartSuccess<T> value)? addCartSuccess,
+    TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
+    required TResult orElse(),
+  }) {
+    if (paymentLoading != null) {
+      return paymentLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PaymentLoading<T> implements CartState<T> {
+  const factory PaymentLoading() = _$PaymentLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$PaymentSuccessImplCopyWith<T, $Res> {
+  factory _$$PaymentSuccessImplCopyWith(_$PaymentSuccessImpl<T> value,
+          $Res Function(_$PaymentSuccessImpl<T>) then) =
+      __$$PaymentSuccessImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$PaymentSuccessImplCopyWithImpl<T, $Res>
+    extends _$CartStateCopyWithImpl<T, $Res, _$PaymentSuccessImpl<T>>
+    implements _$$PaymentSuccessImplCopyWith<T, $Res> {
+  __$$PaymentSuccessImplCopyWithImpl(_$PaymentSuccessImpl<T> _value,
+      $Res Function(_$PaymentSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$PaymentSuccessImpl<T> implements PaymentSuccess<T> {
+  const _$PaymentSuccessImpl();
+
+  @override
+  String toString() {
+    return 'CartState<$T>.paymentSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$PaymentSuccessImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() cartLoading,
+    required TResult Function(GetCartsResponse getCartsResponse) carSuccess,
+    required TResult Function(String message) cartFailure,
+    required TResult Function() addCartLoading,
+    required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
+    required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
+  }) {
+    return paymentSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? cartLoading,
+    TResult? Function(GetCartsResponse getCartsResponse)? carSuccess,
+    TResult? Function(String message)? cartFailure,
+    TResult? Function()? addCartLoading,
+    TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
+    TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
+  }) {
+    return paymentSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? cartLoading,
+    TResult Function(GetCartsResponse getCartsResponse)? carSuccess,
+    TResult Function(String message)? cartFailure,
+    TResult Function()? addCartLoading,
+    TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
+    TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
+    required TResult orElse(),
+  }) {
+    if (paymentSuccess != null) {
+      return paymentSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(CartLoading<T> value) cartLoading,
+    required TResult Function(CartSuccess<T> value) carSuccess,
+    required TResult Function(CartFailure<T> value) cartFailure,
+    required TResult Function(AddCartLoading<T> value) addCartLoading,
+    required TResult Function(AddCartSuccess<T> value) addCartSuccess,
+    required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
+  }) {
+    return paymentSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(CartLoading<T> value)? cartLoading,
+    TResult? Function(CartSuccess<T> value)? carSuccess,
+    TResult? Function(CartFailure<T> value)? cartFailure,
+    TResult? Function(AddCartLoading<T> value)? addCartLoading,
+    TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
+    TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
+  }) {
+    return paymentSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(CartLoading<T> value)? cartLoading,
+    TResult Function(CartSuccess<T> value)? carSuccess,
+    TResult Function(CartFailure<T> value)? cartFailure,
+    TResult Function(AddCartLoading<T> value)? addCartLoading,
+    TResult Function(AddCartSuccess<T> value)? addCartSuccess,
+    TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
+    required TResult orElse(),
+  }) {
+    if (paymentSuccess != null) {
+      return paymentSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PaymentSuccess<T> implements CartState<T> {
+  const factory PaymentSuccess() = _$PaymentSuccessImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$PaymentFailureImplCopyWith<T, $Res> {
+  factory _$$PaymentFailureImplCopyWith(_$PaymentFailureImpl<T> value,
+          $Res Function(_$PaymentFailureImpl<T>) then) =
+      __$$PaymentFailureImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$PaymentFailureImplCopyWithImpl<T, $Res>
+    extends _$CartStateCopyWithImpl<T, $Res, _$PaymentFailureImpl<T>>
+    implements _$$PaymentFailureImplCopyWith<T, $Res> {
+  __$$PaymentFailureImplCopyWithImpl(_$PaymentFailureImpl<T> _value,
+      $Res Function(_$PaymentFailureImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$PaymentFailureImpl<T>(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PaymentFailureImpl<T> implements PaymentFailure<T> {
+  const _$PaymentFailureImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'CartState<$T>.paymentFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PaymentFailureImpl<T> &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PaymentFailureImplCopyWith<T, _$PaymentFailureImpl<T>> get copyWith =>
+      __$$PaymentFailureImplCopyWithImpl<T, _$PaymentFailureImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() cartLoading,
+    required TResult Function(GetCartsResponse getCartsResponse) carSuccess,
+    required TResult Function(String message) cartFailure,
+    required TResult Function() addCartLoading,
+    required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
+    required TResult Function(String message) addCartFailure,
+    required TResult Function() paymentLoading,
+    required TResult Function() paymentSuccess,
+    required TResult Function(String message) paymentFailure,
+  }) {
+    return paymentFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? cartLoading,
+    TResult? Function(GetCartsResponse getCartsResponse)? carSuccess,
+    TResult? Function(String message)? cartFailure,
+    TResult? Function()? addCartLoading,
+    TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
+    TResult? Function(String message)? addCartFailure,
+    TResult? Function()? paymentLoading,
+    TResult? Function()? paymentSuccess,
+    TResult? Function(String message)? paymentFailure,
+  }) {
+    return paymentFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? cartLoading,
+    TResult Function(GetCartsResponse getCartsResponse)? carSuccess,
+    TResult Function(String message)? cartFailure,
+    TResult Function()? addCartLoading,
+    TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
+    TResult Function(String message)? addCartFailure,
+    TResult Function()? paymentLoading,
+    TResult Function()? paymentSuccess,
+    TResult Function(String message)? paymentFailure,
+    required TResult orElse(),
+  }) {
+    if (paymentFailure != null) {
+      return paymentFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(CartLoading<T> value) cartLoading,
+    required TResult Function(CartSuccess<T> value) carSuccess,
+    required TResult Function(CartFailure<T> value) cartFailure,
+    required TResult Function(AddCartLoading<T> value) addCartLoading,
+    required TResult Function(AddCartSuccess<T> value) addCartSuccess,
+    required TResult Function(AddCartFailure<T> value) addCartFailure,
+    required TResult Function(PaymentLoading<T> value) paymentLoading,
+    required TResult Function(PaymentSuccess<T> value) paymentSuccess,
+    required TResult Function(PaymentFailure<T> value) paymentFailure,
+  }) {
+    return paymentFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(CartLoading<T> value)? cartLoading,
+    TResult? Function(CartSuccess<T> value)? carSuccess,
+    TResult? Function(CartFailure<T> value)? cartFailure,
+    TResult? Function(AddCartLoading<T> value)? addCartLoading,
+    TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
+    TResult? Function(AddCartFailure<T> value)? addCartFailure,
+    TResult? Function(PaymentLoading<T> value)? paymentLoading,
+    TResult? Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult? Function(PaymentFailure<T> value)? paymentFailure,
+  }) {
+    return paymentFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(CartLoading<T> value)? cartLoading,
+    TResult Function(CartSuccess<T> value)? carSuccess,
+    TResult Function(CartFailure<T> value)? cartFailure,
+    TResult Function(AddCartLoading<T> value)? addCartLoading,
+    TResult Function(AddCartSuccess<T> value)? addCartSuccess,
+    TResult Function(AddCartFailure<T> value)? addCartFailure,
+    TResult Function(PaymentLoading<T> value)? paymentLoading,
+    TResult Function(PaymentSuccess<T> value)? paymentSuccess,
+    TResult Function(PaymentFailure<T> value)? paymentFailure,
+    required TResult orElse(),
+  }) {
+    if (paymentFailure != null) {
+      return paymentFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PaymentFailure<T> implements CartState<T> {
+  const factory PaymentFailure(final String message) = _$PaymentFailureImpl<T>;
+
+  String get message;
+
+  /// Create a copy of CartState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PaymentFailureImplCopyWith<T, _$PaymentFailureImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

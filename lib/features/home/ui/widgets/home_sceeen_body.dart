@@ -15,7 +15,9 @@ import 'package:shoppify_app/features/home/ui/widgets/home_loading.dart';
 import 'package:shoppify_app/features/home/ui/widgets/recomeded_list_item.dart';
 
 class HomeScreenBody extends StatelessWidget {
-  const HomeScreenBody({super.key});
+  const HomeScreenBody({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +33,9 @@ class HomeScreenBody extends StatelessWidget {
                 homeLoading: () {
                   widget = const HomeLoadingWidget();
                 },
-                homeSuccess: (homeResponse) {
-                  widget = homeSuccess(homeResponse, context);
+                homeSuccess: (homeResponse) async {
+                  widget = homeSuccess(homeResponse, context,
+                      context.read<HomeCubit>().profileData?.name ?? "");
                 },
                 homeFailure: (error) {
                   setupErrorState(context, error);
@@ -44,7 +47,7 @@ class HomeScreenBody extends StatelessWidget {
   }
 }
 
-Widget homeSuccess(HomeResponse homeResponse, context) {
+Widget homeSuccess(HomeResponse homeResponse, context, String userName) {
   return CustomScrollView(
     slivers: [
       SliverList(
@@ -58,7 +61,7 @@ Widget homeSuccess(HomeResponse homeResponse, context) {
                   padding: EdgeInsets.symmetric(horizontal: 8.w),
                   child: Row(
                     children: [
-                      Text("Hello Ahmed",
+                      Text(userName,
                           style: Theme.of(context).textTheme.headlineLarge),
                       const Spacer(),
                       IconButton(

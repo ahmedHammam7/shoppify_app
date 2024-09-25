@@ -5,7 +5,9 @@ import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
 import 'package:shoppify_app/features/home/ui/widgets/home_sceeen_body.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();

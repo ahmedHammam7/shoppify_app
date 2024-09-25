@@ -19,4 +19,9 @@ class CartState<T> with _$CartState<T> {
   const factory CartState.addCartSuccess(AddCartResponse addCartResponse) =
       AddCartSuccess;
   const factory CartState.addCartFailure(String message) = AddCartFailure;
+  //make payment
+
+  const factory CartState.paymentLoading() = PaymentLoading;
+  const factory CartState.paymentSuccess() = PaymentSuccess;
+  const factory CartState.paymentFailure(String message) = PaymentFailure;
 }
