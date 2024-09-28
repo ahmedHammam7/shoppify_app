@@ -64,13 +64,17 @@ class _ResultListItemState extends State<ResultListItem> {
               right: 5.w,
               child: IconButton(
                 onPressed: () async {
-                  await context.read<SearchCubit>().addFavourites({
-                    "product_id": widget.data.id.toString(),
-                  }).then((value) {
+                  if (widget.data.inFavorites == true) {
+                    await context.read<SearchCubit>().removeFavourites(
+                        {"product_id": widget.data.id.toString()});
                     widget.data.inFavorites = !widget.data.inFavorites;
-                  });
-
-                  setState(() {});
+                    setState(() {});
+                  } else {
+                    await context.read<SearchCubit>().addFavourites(
+                        {"product_id": widget.data.id.toString()});
+                    widget.data.inFavorites = !widget.data.inFavorites;
+                    setState(() {});
+                  }
                 },
                 icon: widget.data.inFavorites
                     ? Icon(

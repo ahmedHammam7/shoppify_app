@@ -12,12 +12,7 @@ class SearchState<T> with _$SearchState<T> {
   const factory SearchState.searchSuccess(SearchResponse searchResponse) =
       SearchSuccess;
   const factory SearchState.searchFailure(String error) = SearchFailure;
-  //Addfavorite
-  const factory SearchState.deleteFavoriteSuccess(
-      FavouriteResponse favoriteResponse) = DeleteFavoriteSuccess;
-  const factory SearchState.deleteFavoriteFailure(String error) =
-      DeleteFavoriteFailure;
-  const factory SearchState.deleteFavoriteLoading() = DeleteFavoriteLoading;
+
   //AddCart
   const factory SearchState.addCartLoading() = AddCartLoading;
   const factory SearchState.addCartSuccess(AddCartResponse addCartResponse) =

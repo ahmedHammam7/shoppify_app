@@ -60,11 +60,17 @@ class _DetailsScreenBodyState extends State<DetailsScreenBody> {
                     right: 15.w,
                     child: IconButton(
                       onPressed: () async {
-                        await context.read<SearchCubit>().addFavourites({
-                          "product_id": widget.data.id,
-                        });
-                        widget.data.inFavorites = !widget.data.inFavorites;
-                        setState(() {});
+                        if (widget.data.inFavorites == true) {
+                          await context.read<SearchCubit>().removeFavourites(
+                              {"product_id": widget.data.id.toString()});
+                          widget.data.inFavorites = !widget.data.inFavorites;
+                          setState(() {});
+                        } else {
+                          await context.read<SearchCubit>().addFavourites(
+                              {"product_id": widget.data.id.toString()});
+                          widget.data.inFavorites = !widget.data.inFavorites;
+                          setState(() {});
+                        }
                       },
                       icon: widget.data.inFavorites
                           ? Icon(

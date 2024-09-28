@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/cart/ui/views/cart_screen.dart';
 import 'package:shoppify_app/features/favourite/ui/views/favourite_screen.dart';
-import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
 import 'package:shoppify_app/features/home/ui/views/home_screen.dart';
 import 'package:shoppify_app/features/profile/ui/views/profile_screen.dart';
 import 'package:shoppify_app/features/search/ui/views/search_screen.dart';
@@ -55,7 +53,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                         isDarkMode ? AppColors.white : AppColors.mainBlack,
                     textColor:
                         isDarkMode ? AppColors.mainBlack : AppColors.white,
-                    count: context.read<HomeCubit>().favouriteCount,
+                    count: favoriteCount,
                     child: IconButton(
                         icon: const Icon(Icons.favorite_border),
                         onPressed: () {
@@ -70,7 +68,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                 icon: Icon(Icons.person_outlined), label: "Profile"),
           ],
           currentIndex: currentIndex,
-          onTap: (index) {
+          onTap: (index) async {
             setState(() {
               changeIndex(index);
             });

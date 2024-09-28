@@ -24,7 +24,6 @@ class FavouriteScreen extends StatelessWidget {
       body: BlocProvider(
         create: (context) => FavouritesCubit(
           getIt(),
-          getIt(),
         )..getFavourites(),
         child: const FavouriteScreenBody(),
       ),
