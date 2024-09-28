@@ -4,10 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shoppify_app/core/helper/extension.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
+import 'package:shoppify_app/core/theming/logic/cubit/theme_cubit.dart';
 import 'package:shoppify_app/core/theming/text_styles.dart';
 import 'package:shoppify_app/features/home/data/models/home_response.dart';
-import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
-import 'package:shoppify_app/features/home/logic/home/home_state.dart';
+import 'package:shoppify_app/features/home/logic/home/cubit/home_cubit.dart';
+import 'package:shoppify_app/features/home/logic/home/cubit/home_state.dart';
+import 'package:shoppify_app/features/home/logic/homeLayout/home_layout_cubit.dart';
 import 'package:shoppify_app/features/home/ui/widgets/deals_container.dart';
 import 'package:shoppify_app/features/home/ui/widgets/deals_section.dart';
 import 'package:shoppify_app/features/home/ui/widgets/header_list.dart';
@@ -25,8 +27,8 @@ class HomeScreenBody extends StatelessWidget {
     return SafeArea(
         child: BlocBuilder<HomeCubit, HomeState>(
             buildWhen: (previous, current) =>
-                current is HomeSuccess ||
                 current is HomeLoading ||
+                current is HomeSuccess ||
                 current is HomeFailure,
             builder: (context, state) {
               state.whenOrNull(
@@ -35,7 +37,7 @@ class HomeScreenBody extends StatelessWidget {
                 },
                 homeSuccess: (homeResponse) async {
                   widget = homeSuccess(homeResponse, context,
-                      context.read<HomeCubit>().profileData?.name ?? "");
+                      context.read<HomeLayoutCubit>().profileData?.name ?? "");
                 },
                 homeFailure: (error) {
                   setupErrorState(context, error);
@@ -66,7 +68,7 @@ Widget homeSuccess(HomeResponse homeResponse, context, String userName) {
                       const Spacer(),
                       IconButton(
                           onPressed: () {
-                            context.read<HomeCubit>().toggleTheme();
+                            context.read<ThemeCubit>().toggleTheme();
                           },
                           icon: const Icon(Icons.dark_mode_rounded))
                     ],

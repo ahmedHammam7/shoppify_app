@@ -36,17 +36,4 @@ class CartCubit extends Cubit<CartState> {
       },
     );
   }
-
-  Future<void> deleteCart(String productId) async {
-    emit(const CartState.addCartLoading());
-    final response = await _cartRepos.addCart(productId);
-    response.when(
-      success: (addCartResponse) {
-        emit(CartState.addCartSuccess(addCartResponse));
-      },
-      failure: (message) {
-        emit(CartState.addCartFailure(message));
-      },
-    );
-  }
 }

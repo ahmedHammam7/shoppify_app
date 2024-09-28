@@ -17,10 +17,7 @@ class FavouriteScreenBody extends StatelessWidget {
       buildWhen: (previous, current) =>
           current is AllFavouritesLoading ||
           current is AllFavouritesSuccess ||
-          current is AllFavouritesFailure ||
-          current is FavouriteDeleteError ||
-          current is FavouriteDeleteSuccess ||
-          current is FavouriteDeleteLoading,
+          current is AllFavouritesFailure,
       builder: (context, state) {
         state.whenOrNull(loading: () {
           widget = const FavouriteLoadingWidget();

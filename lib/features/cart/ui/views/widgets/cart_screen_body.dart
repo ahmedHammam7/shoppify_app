@@ -10,7 +10,7 @@ import 'package:shoppify_app/features/cart/ui/views/widgets/cart_list.dart';
 import 'package:shoppify_app/features/cart/ui/views/widgets/cart_loading.dart';
 import 'package:shoppify_app/features/cart/ui/views/widgets/no_cart.dart';
 import 'package:shoppify_app/features/cart/ui/views/widgets/shipping_cart.dart';
-import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
+import 'package:shoppify_app/features/home/logic/homeLayout/home_layout_cubit.dart';
 import 'package:shoppify_app/features/profile/data/models/profile_response.dart';
 import 'package:shoppify_app/features/search/ui/views/widgets/spacer_line.dart';
 
@@ -26,10 +26,7 @@ class CartScreenBody extends StatelessWidget {
         buildWhen: (previous, current) =>
             current is CartSuccess ||
             current is CartFailure ||
-            current is CartLoading ||
-            current is AddCartSuccess ||
-            current is AddCartFailure ||
-            current is AddCartLoading,
+            current is CartLoading,
         builder: (context, state) {
           state.whenOrNull(
             cartLoading: () {
@@ -37,7 +34,7 @@ class CartScreenBody extends StatelessWidget {
             },
             carSuccess: (getCartsResponse) {
               widget = cartSuccessWidget(getCartsResponse, context,
-                  context.read<HomeCubit>().profileData!);
+                  context.read<HomeLayoutCubit>().profileData);
             },
             cartFailure: (error) {
               widget = const NoCart();
@@ -50,7 +47,7 @@ class CartScreenBody extends StatelessWidget {
 }
 
 Widget cartSuccessWidget(
-    GetCartsResponse getCartsResponse, context, ProfileData profileData) {
+    GetCartsResponse getCartsResponse, context, ProfileData? profileData) {
   return SafeArea(
     child: SingleChildScrollView(
       child: Padding(
@@ -71,8 +68,8 @@ Widget cartSuccessWidget(
                   await BlocProvider.of<CartCubit>(context).makePayment(
                       getCartsResponse.data.total,
                       "USD",
-                      profileData.email,
-                      profileData.name);
+                      profileData?.email ?? "",
+                      profileData?.name ?? "");
                 }),
           ],
         ),

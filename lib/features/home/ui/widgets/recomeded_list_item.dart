@@ -6,7 +6,7 @@ import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/features/home/data/models/home_response.dart';
-import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
+import 'package:shoppify_app/features/home/logic/homeLayout/home_layout_cubit.dart';
 
 class RecomededListItem extends StatefulWidget {
   const RecomededListItem({
@@ -57,10 +57,17 @@ class _RecomededListItemState extends State<RecomededListItem> {
               right: 5.w,
               child: IconButton(
                 onPressed: () async {
-                  await context.read<HomeCubit>().addFavourites(
-                      {"product_id": widget.products.id.toString()});
-                  widget.products.inFavorites = !widget.products.inFavorites;
-                  setState(() {});
+                  if (widget.products.inFavorites == true) {
+                    await context.read<HomeLayoutCubit>().removeFavourites(
+                        {"product_id": widget.products.id.toString()});
+                    widget.products.inFavorites = !widget.products.inFavorites;
+                    setState(() {});
+                  } else {
+                    await context.read<HomeLayoutCubit>().addFavourites(
+                        {"product_id": widget.products.id.toString()});
+                    widget.products.inFavorites = !widget.products.inFavorites;
+                    setState(() {});
+                  }
                 },
                 icon: widget.products.inFavorites
                     ? Icon(

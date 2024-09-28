@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/features/cart/data/repos/cart_repos.dart';
 import 'package:shoppify_app/features/favourite/data/repos/favourite_repos.dart';
 import 'package:shoppify_app/features/search/data/repos/search_repos.dart';
@@ -28,18 +29,15 @@ class SearchCubit extends Cubit<SearchState> {
   }
 
   Future<void> addFavourites(Map<String, dynamic> body) async {
-    emit(const SearchState.deleteFavoriteLoading());
+    await _favouriteRepos.addFavourites(body).then((v) async {
+      favoriteCount++;
+    });
+  }
 
-    final response = await _favouriteRepos.addFavourites(body);
-
-    response.when(
-      success: (favouriteResponse) {
-        emit(SearchState.deleteFavoriteSuccess(favouriteResponse));
-      },
-      failure: (error) {
-        emit(SearchState.deleteFavoriteFailure(error));
-      },
-    );
+  Future<void> removeFavourites(Map<String, dynamic> body) async {
+    await _favouriteRepos.addFavourites(body).then((v) async {
+      favoriteCount--;
+    });
   }
 
   Future<void> addCart(String productId) async {

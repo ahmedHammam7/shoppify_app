@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shoppify_app/core/di/dependency_injection.dart';
 import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/routing/routes.dart';
 import 'package:shoppify_app/core/routing/routing.dart';
+import 'package:shoppify_app/core/theming/logic/cubit/theme_cubit.dart';
+import 'package:shoppify_app/core/theming/logic/cubit/theme_state.dart';
 import 'package:shoppify_app/core/theming/theme_data.dart';
-import 'package:shoppify_app/features/home/logic/home/home_cubit.dart';
-import 'package:shoppify_app/features/home/logic/home/home_state.dart';
 
 class ShoppifyApp extends StatelessWidget {
   const ShoppifyApp({super.key});
@@ -18,17 +17,14 @@ class ShoppifyApp extends StatelessWidget {
         designSize: const Size(375, 812),
         minTextAdapt: true,
         builder: (context, child) => BlocProvider(
-            create: (context) => HomeCubit(getIt(), getIt(), getIt())
-              ..getHome()
-              ..getFavourites()
-              ..getProfile(),
-            child: BlocBuilder<HomeCubit, HomeState>(
+            create: (context) => ThemeCubit(),
+            child: BlocBuilder<ThemeCubit, ThemeState>(
               builder: (context, state) {
                 state.whenOrNull(
-                  homeThemeDarked: () {
+                  dark: () {
                     isDarkMode = true;
                   },
-                  homeThemeLighted: () {
+                  light: () {
                     isDarkMode = false;
                   },
                 );

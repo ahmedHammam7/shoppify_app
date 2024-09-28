@@ -6,8 +6,8 @@ import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/features/cart/data/models/get_carts_response.dart';
-import 'package:shoppify_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:shoppify_app/features/cart/ui/views/widgets/cart_add_or_sub.dart';
+import 'package:shoppify_app/features/home/logic/homeLayout/home_layout_cubit.dart';
 
 class CartListItem extends StatefulWidget {
   const CartListItem({super.key, required this.cartItems});
@@ -24,8 +24,8 @@ class _CartListItemState extends State<CartListItem> {
       onDismissed: (direction) async {
         if (direction == DismissDirection.endToStart) {
           await context
-              .read<CartCubit>()
-              .deleteCart(widget.cartItems.product.id.toString());
+              .read<HomeLayoutCubit>()
+              .addOrDeleteCart(widget.cartItems.product.id.toString());
         }
       },
       direction: DismissDirection.endToStart,

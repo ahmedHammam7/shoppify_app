@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:shoppify_app/core/network/api_result.dart';
-import 'package:shoppify_app/core/theming/colors.dart';
-import 'package:shoppify_app/core/theming/theme_data.dart';
 import 'package:shoppify_app/features/cart/data/stripe_payment/models/customer_model.dart';
 import 'package:shoppify_app/features/cart/data/stripe_payment/models/epherimal_key.dart';
 import 'package:shoppify_app/features/cart/data/stripe_payment/models/payment_intent_model.dart';

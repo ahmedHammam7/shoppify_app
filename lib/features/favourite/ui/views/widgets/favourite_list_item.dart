@@ -6,7 +6,7 @@ import 'package:shoppify_app/core/helper/constants.dart';
 import 'package:shoppify_app/core/helper/spacer.dart';
 import 'package:shoppify_app/core/theming/colors.dart';
 import 'package:shoppify_app/features/favourite/data/models/all_favourites_response.dart';
-import 'package:shoppify_app/features/favourite/logic/cubit/favourites_cubit.dart';
+import 'package:shoppify_app/features/home/logic/homeLayout/home_layout_cubit.dart';
 
 class FavouriteListItem extends StatelessWidget {
   const FavouriteListItem({super.key, required this.products});
@@ -17,7 +17,7 @@ class FavouriteListItem extends StatelessWidget {
       key: UniqueKey(),
       onDismissed: (direction) async {
         if (direction == DismissDirection.endToStart) {
-          await context.read<FavouritesCubit>().deleteFavourite({
+          await context.read<HomeLayoutCubit>().removeFavourites({
             "product_id": products.id.toString(),
           });
         }
@@ -101,7 +101,7 @@ class FavouriteListItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(12.r)),
           child: IconButton(
             onPressed: () async {
-              await context.read<FavouritesCubit>().addCart(
+              await context.read<HomeLayoutCubit>().addOrDeleteCart(
                     products.id.toString(),
                   );
             },
