@@ -22,10 +22,6 @@ mixin _$SearchState<T> {
     required TResult Function() searchloading,
     required TResult Function(SearchResponse searchResponse) searchSuccess,
     required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String error) addCartFailure,
@@ -37,10 +33,6 @@ mixin _$SearchState<T> {
     TResult? Function()? searchloading,
     TResult? Function(SearchResponse searchResponse)? searchSuccess,
     TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String error)? addCartFailure,
@@ -52,9 +44,6 @@ mixin _$SearchState<T> {
     TResult Function()? searchloading,
     TResult Function(SearchResponse searchResponse)? searchSuccess,
     TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String error)? addCartFailure,
@@ -67,12 +56,6 @@ mixin _$SearchState<T> {
     required TResult Function(SearchLoading<T> value) searchloading,
     required TResult Function(SearchSuccess<T> value) searchSuccess,
     required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
@@ -84,9 +67,6 @@ mixin _$SearchState<T> {
     TResult? Function(SearchLoading<T> value)? searchloading,
     TResult? Function(SearchSuccess<T> value)? searchSuccess,
     TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
@@ -98,9 +78,6 @@ mixin _$SearchState<T> {
     TResult Function(SearchLoading<T> value)? searchloading,
     TResult Function(SearchSuccess<T> value)? searchSuccess,
     TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
@@ -175,10 +152,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() searchloading,
     required TResult Function(SearchResponse searchResponse) searchSuccess,
     required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String error) addCartFailure,
@@ -193,10 +166,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? searchloading,
     TResult? Function(SearchResponse searchResponse)? searchSuccess,
     TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String error)? addCartFailure,
@@ -211,9 +180,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? searchloading,
     TResult Function(SearchResponse searchResponse)? searchSuccess,
     TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String error)? addCartFailure,
@@ -232,12 +198,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(SearchLoading<T> value) searchloading,
     required TResult Function(SearchSuccess<T> value) searchSuccess,
     required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
@@ -252,9 +212,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(SearchLoading<T> value)? searchloading,
     TResult? Function(SearchSuccess<T> value)? searchSuccess,
     TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
@@ -269,9 +226,6 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(SearchLoading<T> value)? searchloading,
     TResult Function(SearchSuccess<T> value)? searchSuccess,
     TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
@@ -333,10 +287,6 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     required TResult Function() searchloading,
     required TResult Function(SearchResponse searchResponse) searchSuccess,
     required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String error) addCartFailure,
@@ -351,10 +301,6 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     TResult? Function()? searchloading,
     TResult? Function(SearchResponse searchResponse)? searchSuccess,
     TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String error)? addCartFailure,
@@ -369,9 +315,6 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     TResult Function()? searchloading,
     TResult Function(SearchResponse searchResponse)? searchSuccess,
     TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String error)? addCartFailure,
@@ -390,12 +333,6 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     required TResult Function(SearchLoading<T> value) searchloading,
     required TResult Function(SearchSuccess<T> value) searchSuccess,
     required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
@@ -410,9 +347,6 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     TResult? Function(SearchLoading<T> value)? searchloading,
     TResult? Function(SearchSuccess<T> value)? searchSuccess,
     TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
@@ -427,9 +361,6 @@ class _$SearchLoadingImpl<T> implements SearchLoading<T> {
     TResult Function(SearchLoading<T> value)? searchloading,
     TResult Function(SearchSuccess<T> value)? searchSuccess,
     TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
@@ -520,10 +451,6 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     required TResult Function() searchloading,
     required TResult Function(SearchResponse searchResponse) searchSuccess,
     required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String error) addCartFailure,
@@ -538,10 +465,6 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     TResult? Function()? searchloading,
     TResult? Function(SearchResponse searchResponse)? searchSuccess,
     TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String error)? addCartFailure,
@@ -556,9 +479,6 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     TResult Function()? searchloading,
     TResult Function(SearchResponse searchResponse)? searchSuccess,
     TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String error)? addCartFailure,
@@ -577,12 +497,6 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     required TResult Function(SearchLoading<T> value) searchloading,
     required TResult Function(SearchSuccess<T> value) searchSuccess,
     required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
@@ -597,9 +511,6 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     TResult? Function(SearchLoading<T> value)? searchloading,
     TResult? Function(SearchSuccess<T> value)? searchSuccess,
     TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
@@ -614,9 +525,6 @@ class _$SearchSuccessImpl<T> implements SearchSuccess<T> {
     TResult Function(SearchLoading<T> value)? searchloading,
     TResult Function(SearchSuccess<T> value)? searchSuccess,
     TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
@@ -715,10 +623,6 @@ class _$SearchFailureImpl<T> implements SearchFailure<T> {
     required TResult Function() searchloading,
     required TResult Function(SearchResponse searchResponse) searchSuccess,
     required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String error) addCartFailure,
@@ -733,10 +637,6 @@ class _$SearchFailureImpl<T> implements SearchFailure<T> {
     TResult? Function()? searchloading,
     TResult? Function(SearchResponse searchResponse)? searchSuccess,
     TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String error)? addCartFailure,
@@ -751,9 +651,6 @@ class _$SearchFailureImpl<T> implements SearchFailure<T> {
     TResult Function()? searchloading,
     TResult Function(SearchResponse searchResponse)? searchSuccess,
     TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String error)? addCartFailure,
@@ -772,12 +669,6 @@ class _$SearchFailureImpl<T> implements SearchFailure<T> {
     required TResult Function(SearchLoading<T> value) searchloading,
     required TResult Function(SearchSuccess<T> value) searchSuccess,
     required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
@@ -792,9 +683,6 @@ class _$SearchFailureImpl<T> implements SearchFailure<T> {
     TResult? Function(SearchLoading<T> value)? searchloading,
     TResult? Function(SearchSuccess<T> value)? searchSuccess,
     TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
@@ -809,9 +697,6 @@ class _$SearchFailureImpl<T> implements SearchFailure<T> {
     TResult Function(SearchLoading<T> value)? searchloading,
     TResult Function(SearchSuccess<T> value)? searchSuccess,
     TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
@@ -834,563 +719,6 @@ abstract class SearchFailure<T> implements SearchState<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchFailureImplCopyWith<T, _$SearchFailureImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$DeleteFavoriteSuccessImplCopyWith<T, $Res> {
-  factory _$$DeleteFavoriteSuccessImplCopyWith(
-          _$DeleteFavoriteSuccessImpl<T> value,
-          $Res Function(_$DeleteFavoriteSuccessImpl<T>) then) =
-      __$$DeleteFavoriteSuccessImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({FavouriteResponse favoriteResponse});
-}
-
-/// @nodoc
-class __$$DeleteFavoriteSuccessImplCopyWithImpl<T, $Res>
-    extends _$SearchStateCopyWithImpl<T, $Res, _$DeleteFavoriteSuccessImpl<T>>
-    implements _$$DeleteFavoriteSuccessImplCopyWith<T, $Res> {
-  __$$DeleteFavoriteSuccessImplCopyWithImpl(
-      _$DeleteFavoriteSuccessImpl<T> _value,
-      $Res Function(_$DeleteFavoriteSuccessImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? favoriteResponse = null,
-  }) {
-    return _then(_$DeleteFavoriteSuccessImpl<T>(
-      null == favoriteResponse
-          ? _value.favoriteResponse
-          : favoriteResponse // ignore: cast_nullable_to_non_nullable
-              as FavouriteResponse,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$DeleteFavoriteSuccessImpl<T> implements DeleteFavoriteSuccess<T> {
-  const _$DeleteFavoriteSuccessImpl(this.favoriteResponse);
-
-  @override
-  final FavouriteResponse favoriteResponse;
-
-  @override
-  String toString() {
-    return 'SearchState<$T>.deleteFavoriteSuccess(favoriteResponse: $favoriteResponse)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeleteFavoriteSuccessImpl<T> &&
-            (identical(other.favoriteResponse, favoriteResponse) ||
-                other.favoriteResponse == favoriteResponse));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, favoriteResponse);
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DeleteFavoriteSuccessImplCopyWith<T, _$DeleteFavoriteSuccessImpl<T>>
-      get copyWith => __$$DeleteFavoriteSuccessImplCopyWithImpl<T,
-          _$DeleteFavoriteSuccessImpl<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() searchloading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
-    required TResult Function() addCartLoading,
-    required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
-    required TResult Function(String error) addCartFailure,
-  }) {
-    return deleteFavoriteSuccess(favoriteResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? searchloading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
-    TResult? Function()? addCartLoading,
-    TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
-    TResult? Function(String error)? addCartFailure,
-  }) {
-    return deleteFavoriteSuccess?.call(favoriteResponse);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? searchloading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
-    TResult Function()? addCartLoading,
-    TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
-    TResult Function(String error)? addCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteFavoriteSuccess != null) {
-      return deleteFavoriteSuccess(favoriteResponse);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(SearchLoading<T> value) searchloading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
-    required TResult Function(AddCartLoading<T> value) addCartLoading,
-    required TResult Function(AddCartSuccess<T> value) addCartSuccess,
-    required TResult Function(AddCartFailure<T> value) addCartFailure,
-  }) {
-    return deleteFavoriteSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(SearchLoading<T> value)? searchloading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
-    TResult? Function(AddCartLoading<T> value)? addCartLoading,
-    TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
-    TResult? Function(AddCartFailure<T> value)? addCartFailure,
-  }) {
-    return deleteFavoriteSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(SearchLoading<T> value)? searchloading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
-    TResult Function(AddCartLoading<T> value)? addCartLoading,
-    TResult Function(AddCartSuccess<T> value)? addCartSuccess,
-    TResult Function(AddCartFailure<T> value)? addCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteFavoriteSuccess != null) {
-      return deleteFavoriteSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DeleteFavoriteSuccess<T> implements SearchState<T> {
-  const factory DeleteFavoriteSuccess(
-          final FavouriteResponse favoriteResponse) =
-      _$DeleteFavoriteSuccessImpl<T>;
-
-  FavouriteResponse get favoriteResponse;
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DeleteFavoriteSuccessImplCopyWith<T, _$DeleteFavoriteSuccessImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$DeleteFavoriteFailureImplCopyWith<T, $Res> {
-  factory _$$DeleteFavoriteFailureImplCopyWith(
-          _$DeleteFavoriteFailureImpl<T> value,
-          $Res Function(_$DeleteFavoriteFailureImpl<T>) then) =
-      __$$DeleteFavoriteFailureImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({String error});
-}
-
-/// @nodoc
-class __$$DeleteFavoriteFailureImplCopyWithImpl<T, $Res>
-    extends _$SearchStateCopyWithImpl<T, $Res, _$DeleteFavoriteFailureImpl<T>>
-    implements _$$DeleteFavoriteFailureImplCopyWith<T, $Res> {
-  __$$DeleteFavoriteFailureImplCopyWithImpl(
-      _$DeleteFavoriteFailureImpl<T> _value,
-      $Res Function(_$DeleteFavoriteFailureImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? error = null,
-  }) {
-    return _then(_$DeleteFavoriteFailureImpl<T>(
-      null == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$DeleteFavoriteFailureImpl<T> implements DeleteFavoriteFailure<T> {
-  const _$DeleteFavoriteFailureImpl(this.error);
-
-  @override
-  final String error;
-
-  @override
-  String toString() {
-    return 'SearchState<$T>.deleteFavoriteFailure(error: $error)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeleteFavoriteFailureImpl<T> &&
-            (identical(other.error, error) || other.error == error));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, error);
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DeleteFavoriteFailureImplCopyWith<T, _$DeleteFavoriteFailureImpl<T>>
-      get copyWith => __$$DeleteFavoriteFailureImplCopyWithImpl<T,
-          _$DeleteFavoriteFailureImpl<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() searchloading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
-    required TResult Function() addCartLoading,
-    required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
-    required TResult Function(String error) addCartFailure,
-  }) {
-    return deleteFavoriteFailure(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? searchloading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
-    TResult? Function()? addCartLoading,
-    TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
-    TResult? Function(String error)? addCartFailure,
-  }) {
-    return deleteFavoriteFailure?.call(error);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? searchloading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
-    TResult Function()? addCartLoading,
-    TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
-    TResult Function(String error)? addCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteFavoriteFailure != null) {
-      return deleteFavoriteFailure(error);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(SearchLoading<T> value) searchloading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
-    required TResult Function(AddCartLoading<T> value) addCartLoading,
-    required TResult Function(AddCartSuccess<T> value) addCartSuccess,
-    required TResult Function(AddCartFailure<T> value) addCartFailure,
-  }) {
-    return deleteFavoriteFailure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(SearchLoading<T> value)? searchloading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
-    TResult? Function(AddCartLoading<T> value)? addCartLoading,
-    TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
-    TResult? Function(AddCartFailure<T> value)? addCartFailure,
-  }) {
-    return deleteFavoriteFailure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(SearchLoading<T> value)? searchloading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
-    TResult Function(AddCartLoading<T> value)? addCartLoading,
-    TResult Function(AddCartSuccess<T> value)? addCartSuccess,
-    TResult Function(AddCartFailure<T> value)? addCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteFavoriteFailure != null) {
-      return deleteFavoriteFailure(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DeleteFavoriteFailure<T> implements SearchState<T> {
-  const factory DeleteFavoriteFailure(final String error) =
-      _$DeleteFavoriteFailureImpl<T>;
-
-  String get error;
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DeleteFavoriteFailureImplCopyWith<T, _$DeleteFavoriteFailureImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$DeleteFavoriteLoadingImplCopyWith<T, $Res> {
-  factory _$$DeleteFavoriteLoadingImplCopyWith(
-          _$DeleteFavoriteLoadingImpl<T> value,
-          $Res Function(_$DeleteFavoriteLoadingImpl<T>) then) =
-      __$$DeleteFavoriteLoadingImplCopyWithImpl<T, $Res>;
-}
-
-/// @nodoc
-class __$$DeleteFavoriteLoadingImplCopyWithImpl<T, $Res>
-    extends _$SearchStateCopyWithImpl<T, $Res, _$DeleteFavoriteLoadingImpl<T>>
-    implements _$$DeleteFavoriteLoadingImplCopyWith<T, $Res> {
-  __$$DeleteFavoriteLoadingImplCopyWithImpl(
-      _$DeleteFavoriteLoadingImpl<T> _value,
-      $Res Function(_$DeleteFavoriteLoadingImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$DeleteFavoriteLoadingImpl<T> implements DeleteFavoriteLoading<T> {
-  const _$DeleteFavoriteLoadingImpl();
-
-  @override
-  String toString() {
-    return 'SearchState<$T>.deleteFavoriteLoading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeleteFavoriteLoadingImpl<T>);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() searchloading,
-    required TResult Function(SearchResponse searchResponse) searchSuccess,
-    required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
-    required TResult Function() addCartLoading,
-    required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
-    required TResult Function(String error) addCartFailure,
-  }) {
-    return deleteFavoriteLoading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? searchloading,
-    TResult? Function(SearchResponse searchResponse)? searchSuccess,
-    TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
-    TResult? Function()? addCartLoading,
-    TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
-    TResult? Function(String error)? addCartFailure,
-  }) {
-    return deleteFavoriteLoading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? searchloading,
-    TResult Function(SearchResponse searchResponse)? searchSuccess,
-    TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
-    TResult Function()? addCartLoading,
-    TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
-    TResult Function(String error)? addCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteFavoriteLoading != null) {
-      return deleteFavoriteLoading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(SearchLoading<T> value) searchloading,
-    required TResult Function(SearchSuccess<T> value) searchSuccess,
-    required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
-    required TResult Function(AddCartLoading<T> value) addCartLoading,
-    required TResult Function(AddCartSuccess<T> value) addCartSuccess,
-    required TResult Function(AddCartFailure<T> value) addCartFailure,
-  }) {
-    return deleteFavoriteLoading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(SearchLoading<T> value)? searchloading,
-    TResult? Function(SearchSuccess<T> value)? searchSuccess,
-    TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
-    TResult? Function(AddCartLoading<T> value)? addCartLoading,
-    TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
-    TResult? Function(AddCartFailure<T> value)? addCartFailure,
-  }) {
-    return deleteFavoriteLoading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(SearchLoading<T> value)? searchloading,
-    TResult Function(SearchSuccess<T> value)? searchSuccess,
-    TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
-    TResult Function(AddCartLoading<T> value)? addCartLoading,
-    TResult Function(AddCartSuccess<T> value)? addCartSuccess,
-    TResult Function(AddCartFailure<T> value)? addCartFailure,
-    required TResult orElse(),
-  }) {
-    if (deleteFavoriteLoading != null) {
-      return deleteFavoriteLoading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DeleteFavoriteLoading<T> implements SearchState<T> {
-  const factory DeleteFavoriteLoading() = _$DeleteFavoriteLoadingImpl<T>;
 }
 
 /// @nodoc
@@ -1438,10 +766,6 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     required TResult Function() searchloading,
     required TResult Function(SearchResponse searchResponse) searchSuccess,
     required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String error) addCartFailure,
@@ -1456,10 +780,6 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     TResult? Function()? searchloading,
     TResult? Function(SearchResponse searchResponse)? searchSuccess,
     TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String error)? addCartFailure,
@@ -1474,9 +794,6 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     TResult Function()? searchloading,
     TResult Function(SearchResponse searchResponse)? searchSuccess,
     TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String error)? addCartFailure,
@@ -1495,12 +812,6 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     required TResult Function(SearchLoading<T> value) searchloading,
     required TResult Function(SearchSuccess<T> value) searchSuccess,
     required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
@@ -1515,9 +826,6 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     TResult? Function(SearchLoading<T> value)? searchloading,
     TResult? Function(SearchSuccess<T> value)? searchSuccess,
     TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
@@ -1532,9 +840,6 @@ class _$AddCartLoadingImpl<T> implements AddCartLoading<T> {
     TResult Function(SearchLoading<T> value)? searchloading,
     TResult Function(SearchSuccess<T> value)? searchSuccess,
     TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
@@ -1625,10 +930,6 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     required TResult Function() searchloading,
     required TResult Function(SearchResponse searchResponse) searchSuccess,
     required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String error) addCartFailure,
@@ -1643,10 +944,6 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     TResult? Function()? searchloading,
     TResult? Function(SearchResponse searchResponse)? searchSuccess,
     TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String error)? addCartFailure,
@@ -1661,9 +958,6 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     TResult Function()? searchloading,
     TResult Function(SearchResponse searchResponse)? searchSuccess,
     TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String error)? addCartFailure,
@@ -1682,12 +976,6 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     required TResult Function(SearchLoading<T> value) searchloading,
     required TResult Function(SearchSuccess<T> value) searchSuccess,
     required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
@@ -1702,9 +990,6 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     TResult? Function(SearchLoading<T> value)? searchloading,
     TResult? Function(SearchSuccess<T> value)? searchSuccess,
     TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
@@ -1719,9 +1004,6 @@ class _$AddCartSuccessImpl<T> implements AddCartSuccess<T> {
     TResult Function(SearchLoading<T> value)? searchloading,
     TResult Function(SearchSuccess<T> value)? searchSuccess,
     TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,
@@ -1820,10 +1102,6 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     required TResult Function() searchloading,
     required TResult Function(SearchResponse searchResponse) searchSuccess,
     required TResult Function(String error) searchFailure,
-    required TResult Function(FavouriteResponse favoriteResponse)
-        deleteFavoriteSuccess,
-    required TResult Function(String error) deleteFavoriteFailure,
-    required TResult Function() deleteFavoriteLoading,
     required TResult Function() addCartLoading,
     required TResult Function(AddCartResponse addCartResponse) addCartSuccess,
     required TResult Function(String error) addCartFailure,
@@ -1838,10 +1116,6 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     TResult? Function()? searchloading,
     TResult? Function(SearchResponse searchResponse)? searchSuccess,
     TResult? Function(String error)? searchFailure,
-    TResult? Function(FavouriteResponse favoriteResponse)?
-        deleteFavoriteSuccess,
-    TResult? Function(String error)? deleteFavoriteFailure,
-    TResult? Function()? deleteFavoriteLoading,
     TResult? Function()? addCartLoading,
     TResult? Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult? Function(String error)? addCartFailure,
@@ -1856,9 +1130,6 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     TResult Function()? searchloading,
     TResult Function(SearchResponse searchResponse)? searchSuccess,
     TResult Function(String error)? searchFailure,
-    TResult Function(FavouriteResponse favoriteResponse)? deleteFavoriteSuccess,
-    TResult Function(String error)? deleteFavoriteFailure,
-    TResult Function()? deleteFavoriteLoading,
     TResult Function()? addCartLoading,
     TResult Function(AddCartResponse addCartResponse)? addCartSuccess,
     TResult Function(String error)? addCartFailure,
@@ -1877,12 +1148,6 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     required TResult Function(SearchLoading<T> value) searchloading,
     required TResult Function(SearchSuccess<T> value) searchSuccess,
     required TResult Function(SearchFailure<T> value) searchFailure,
-    required TResult Function(DeleteFavoriteSuccess<T> value)
-        deleteFavoriteSuccess,
-    required TResult Function(DeleteFavoriteFailure<T> value)
-        deleteFavoriteFailure,
-    required TResult Function(DeleteFavoriteLoading<T> value)
-        deleteFavoriteLoading,
     required TResult Function(AddCartLoading<T> value) addCartLoading,
     required TResult Function(AddCartSuccess<T> value) addCartSuccess,
     required TResult Function(AddCartFailure<T> value) addCartFailure,
@@ -1897,9 +1162,6 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     TResult? Function(SearchLoading<T> value)? searchloading,
     TResult? Function(SearchSuccess<T> value)? searchSuccess,
     TResult? Function(SearchFailure<T> value)? searchFailure,
-    TResult? Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult? Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult? Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult? Function(AddCartLoading<T> value)? addCartLoading,
     TResult? Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult? Function(AddCartFailure<T> value)? addCartFailure,
@@ -1914,9 +1176,6 @@ class _$AddCartFailureImpl<T> implements AddCartFailure<T> {
     TResult Function(SearchLoading<T> value)? searchloading,
     TResult Function(SearchSuccess<T> value)? searchSuccess,
     TResult Function(SearchFailure<T> value)? searchFailure,
-    TResult Function(DeleteFavoriteSuccess<T> value)? deleteFavoriteSuccess,
-    TResult Function(DeleteFavoriteFailure<T> value)? deleteFavoriteFailure,
-    TResult Function(DeleteFavoriteLoading<T> value)? deleteFavoriteLoading,
     TResult Function(AddCartLoading<T> value)? addCartLoading,
     TResult Function(AddCartSuccess<T> value)? addCartSuccess,
     TResult Function(AddCartFailure<T> value)? addCartFailure,

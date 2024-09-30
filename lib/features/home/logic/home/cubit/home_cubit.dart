@@ -12,7 +12,7 @@ class HomeCubit extends Cubit<HomeState> {
         emit(HomeState.homeSuccess(homeResponse));
       },
       failure: (error) {
-        emit(HomeState.homeFailure(error));
+        emit(HomeState.homeFailure(error.message ?? ""));
       },
     );
   }

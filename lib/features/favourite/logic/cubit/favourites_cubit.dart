@@ -17,7 +17,7 @@ class FavouritesCubit extends Cubit<FavouritesState> {
         emit(FavouritesState.success(favouriteResponse));
       },
       failure: (error) {
-        emit(FavouritesState.failure(error));
+        emit(FavouritesState.failure(error.message ?? ""));
       },
     );
   }

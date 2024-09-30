@@ -16,8 +16,8 @@ class CartCubit extends Cubit<CartState> {
       success: (getCartsResponse) {
         emit(CartState.carSuccess(getCartsResponse));
       },
-      failure: (message) {
-        emit(CartState.cartFailure(message));
+      failure: (error) {
+        emit(CartState.cartFailure(error.message ?? ""));
       },
     );
   }
@@ -31,8 +31,8 @@ class CartCubit extends Cubit<CartState> {
       success: (paymentIntentData) {
         emit(const CartState.paymentSuccess());
       },
-      failure: (message) {
-        emit(CartState.paymentFailure(message));
+      failure: (error) {
+        emit(CartState.paymentFailure(error.message ?? ""));
       },
     );
   }

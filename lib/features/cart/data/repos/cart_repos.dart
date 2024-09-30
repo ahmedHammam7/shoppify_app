@@ -1,5 +1,6 @@
 import 'package:shoppify_app/core/helper/shared_prefs/shared_prefs.dart';
 import 'package:shoppify_app/core/helper/shared_prefs/shared_prefs_constant.dart';
+import 'package:shoppify_app/core/network/api_error_handler.dart';
 import 'package:shoppify_app/core/network/api_result.dart';
 import 'package:shoppify_app/core/network/api_service.dart';
 import 'package:shoppify_app/features/cart/data/models/add_cart_response.dart';
@@ -19,7 +20,7 @@ class CartRepos {
 
       return ApiResult.success(response);
     } catch (e) {
-      return ApiResult.failure(e.toString());
+      return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 
@@ -30,7 +31,7 @@ class CartRepos {
           "en");
       return ApiResult.success(response);
     } catch (e) {
-      return ApiResult.failure(e.toString());
+      return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 }
