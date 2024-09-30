@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,7 +35,6 @@ class LoginBlocLiscener extends StatelessWidget {
               await context.pushNamedAndRemoveUntil(
                 Routes.homeLayout,
                 predicate: (route) => false,
-                arguments: loginResponse.data,
               );
             },
             error: (message) {

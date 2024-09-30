@@ -36,7 +36,8 @@ class HomeLayoutCubit extends Cubit<HomeLayoutState> {
         profileData = response.data;
         emit(HomeLayoutState.profileSuccess(response));
       },
-      failure: (error) => emit(HomeLayoutState.profileFailure(error)),
+      failure: (error) =>
+          emit(HomeLayoutState.profileFailure(error.message ?? "")),
     );
   }
 
@@ -57,7 +58,7 @@ class HomeLayoutCubit extends Cubit<HomeLayoutState> {
         emit(HomeLayoutState.addCartSuccess(addCartResponse));
       },
       failure: (message) {
-        emit(HomeLayoutState.addCartFailure(message));
+        emit(HomeLayoutState.addCartFailure(message.message ?? ""));
       },
     );
   }

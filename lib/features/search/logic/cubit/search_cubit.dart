@@ -23,7 +23,7 @@ class SearchCubit extends Cubit<SearchState> {
         emit(SearchState.searchSuccess(searchResponse));
       },
       failure: (error) {
-        emit(SearchState.searchFailure(error));
+        emit(SearchState.searchFailure(error.message ?? ""));
       },
     );
   }
@@ -48,7 +48,7 @@ class SearchCubit extends Cubit<SearchState> {
         emit(SearchState.addCartSuccess(addCartResponse));
       },
       failure: (error) {
-        emit(SearchState.addCartFailure(error));
+        emit(SearchState.addCartFailure(error.message ?? ''));
       },
     );
   }

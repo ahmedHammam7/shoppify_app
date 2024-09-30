@@ -1,3 +1,4 @@
+import 'package:shoppify_app/core/network/api_error_handler.dart';
 import 'package:shoppify_app/core/network/api_result.dart';
 import 'package:shoppify_app/core/network/api_service.dart';
 import 'package:shoppify_app/features/auth/data/models/login/login_request.dart';
@@ -12,7 +13,7 @@ class LoginRepo {
       final response = await _apiService.login(loginRequest);
       return ApiResult.success(response);
     } catch (e) {
-      return ApiResult.failure(e.toString());
+      return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 }

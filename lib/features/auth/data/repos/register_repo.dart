@@ -1,3 +1,4 @@
+import 'package:shoppify_app/core/network/api_error_handler.dart';
 import 'package:shoppify_app/core/network/api_result.dart';
 import 'package:shoppify_app/core/network/api_service.dart';
 import 'package:shoppify_app/features/auth/data/models/register/register_request.dart';
@@ -13,7 +14,7 @@ class RegisterRepo {
       final response = await _apiService.register(registerRequest);
       return ApiResult.success(response);
     } catch (e) {
-      return ApiResult.failure(e.toString());
+      return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 }

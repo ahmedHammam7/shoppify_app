@@ -1,4 +1,5 @@
 import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:shoppify_app/core/network/api_error_handler.dart';
 import 'package:shoppify_app/core/network/api_result.dart';
 import 'package:shoppify_app/features/cart/data/stripe_payment/models/customer_model.dart';
 import 'package:shoppify_app/features/cart/data/stripe_payment/models/epherimal_key.dart';
@@ -23,7 +24,7 @@ class StripeRepos {
       );
       return ApiResult.success(response);
     } catch (e) {
-      return ApiResult.failure(e.toString());
+      return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 
@@ -37,7 +38,7 @@ class StripeRepos {
       );
       return ApiResult.success(response);
     } catch (e) {
-      return ApiResult.failure(e.toString());
+      return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 
@@ -63,7 +64,7 @@ class StripeRepos {
       );
       return ApiResult.success(response);
     } catch (e) {
-      return ApiResult.failure(e.toString());
+      return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 
@@ -100,7 +101,7 @@ class StripeRepos {
       );
       return ApiResult.success(response);
     } catch (e) {
-      return ApiResult.failure(e.toString());
+      return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 }
